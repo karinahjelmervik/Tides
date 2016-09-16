@@ -111,7 +111,6 @@ system. The sill depth is 26 m and the depth in the basin inside the sill is mor
 inner basin and the sill area are connected by a channel which is much deeper and a little wider
 than Saltstraumen.
 
-
 The Norwegian Mapping Authority, Hydrographic Service has 23 tide gauges along the Norwegian coast included one at Spitsbergen. Data is available from 1992 up to the current year. Four of the gauges are placed in the Oslofjord  (Fig.~\ref{fig:area1}) and one close to the open boundary of the Saltfjord.
 
 \begin{figure}[!t]
@@ -169,17 +168,6 @@ The tidal forcing is obtained from the global, inverse barotropic tidal model (T
 
 The method is straight forward. First the global tidal forcing, here the global TPXO with a resolution of 1/4 degree were imposed at the open boundaries of the fjord models. The simulated time period is 180 days. Time series of observed and modelled water level from locations close to the tidal gauge stations close to the open boundaries, were extracted and analysed based on the T\_Tide package described by \cite{pawlowicz02}. For the Oslofjord model, observed and modelled water level are extracted from a location near Viker which lies inside the model domain. For the Saltfjord model, observed and modelled water level are extracted from a location near Bod\o which lies outside the model domain. Ten major tide constitutents of diurnal (K$_1$, P$_1$, and O$_1$), semidiurnal (K$_2$, S$_2$, M$_2$, and N$_2$), and quarter-diurnal (MN$_4$, M$_4$, and MS$_4$) frequencies are retrieved from the observed and modelled time series. 
 
-To better match the observations, tidal amplitudes and corresponding phases at Viker tidal gauge station were then modified by computing an amplitude factor, c(n), and a phaseshift, Df (n) for each tidal component n according to:
-c(n) = a(n)
-obs/a(n)
-sim (4)
-Df (n) = f (n)
-obs
--f (n)
-sim (5)
-where a(n) is the amplitude and f (n) is the phase for tidal component number n of the water level in the column ATPXO. New amplitudes and phases at the boundary were then calculated using the computed amplification factor and phaseshift on both water level and velocity. The modified tides were then supplied to the FjordOs CL and run for a year with tidal forcing only. The new results were then analyzed exactly as for the ATPXO run.
-
-
 To better match the observations, the tidal amplitudes and corresponding phase were modified by computing an amplitude factor, $c^{(n)}$, and a phase shift, $\triangle \phi^{(n)}$, for each tidal component according to :
 \begin{eqnarray}
 c^{(n)} &=& \frac{a^{(n)}_{obs}}{a^{(n)}_{sim}} \\
@@ -190,25 +178,26 @@ where $a^{(n)}$ is the amplitude and $\phi^{(n)}$ the phase for tidal component 
 New amplitudes and phases at the boundary were then calculated using the computed factors and phase shifts on both water level and velocity. The new amplitudes and phases imposed at the open boundaries of new simulations where taken as:
 \begin{eqnarray}
 a^{(n)}_{new} &=& a^{(n)} a{(n)} \\
-\triangle \phi^{(n)}_{new} &=& \phi^{(n)} + \triangle \phi^{(n)}
+\phi^{(n)}_{new} &=& \phi^{(n)} + \triangle \phi^{(n)}
 \end{eqnarray}
 where $a^{(n)}$ and $\phi^{(n)}$ are the amplitude and phase originally imposed on the boundary. Modified amplitude and phase for the tidal current are adjusted in the same way.
 
-\section{Discussion and results}
+The new results were then analysed as for the first run.
 
+\section{Discussion and results}
 
 Time series from this initial run with coarse tidal forcing on the boundary, are then analysed using T\_tide, and compared with observed tidal water level close to the open boundary. Here is the observed tidal water level in red and the simulated tidal water level in black. As you can see the amplitudes are not correct and also the phase is a little bit off.
 
-Nine tidal constitutes are included in the tidal forcing. As you can see the difference in observed and simulated amplitude for M2 is 2 cm and the phase difference 12 degrees. Based on that we calculate the ratio and the phase difference, and apply it on the tidal forcin.
+Nine tidal constitutes are included in the tidal forcing. As you can see the difference in observed and simulated amplitude for M2 is 2 cm and the phase difference 12 degrees. Based on that we calculate the ratio and the phase difference, and apply it on the tidal forcing.
 
-We then rerun the model with adjusted tidal forcing, do the harmonic analyses and compare again with the observed time series. Here we have plotted the combined tidal amplitudes of the nine components.  And as you can see the results are pretty desent. 
+We then rerun the model with adjusted tidal forcing, do the harmonic analyses and compare again with the observed time series. Here we have plotted the combined tidal amplitudes of the nine components.  And as you can see the results are pretty descent. 
 
-Here are the tidal amplitudes for the nine components in three different posiitions were we have permanent tidal gauges. We do not have a perfect match, but the results are promising. 
+Here are the tidal amplitudes for the nine components in three different positions were we have permanent tidal gauges. We do not have a perfect match, but the results are promising. 
 
-The spatial variation is larger in the Salt fjord. The Saltstraum is one of the worlds strongest tidal currents. Due to a narrow passage the tidal amplitude is much smaller inside the narrow passage than outside the passage, resulting in strong currents. 
+The spatial variation is larger in the Salt fjord. The Saltstraumen is one of the worlds strongest tidal currents. Due to a narrow passage the tidal amplitude is much smaller inside the narrow passage than outside the passage, resulting in strong currents. 
 
 
-The model is run twice. First with the original tidal forcing. Secondly with the adjusted tidal forcing. Tabel \ref{tab:Viker} shows that the adjustment has the desired effect close to the open boundary. Tabel \ref{tab:Oscarsborg} shows that the simulated tides are distributed as intended in the inner parts of the fjord.
+The model is run twice. First with the original tidal forcing. Secondly with the adjusted tidal forcing. Table \ref{tab:Viker} shows that the adjustment has the desired effect close to the open boundary. Table \ref{tab:Oscarsborg} shows that the simulated tides are distributed as intended in the inner parts of the fjord.
 
 The tidal current components vary across the fjord.... \cite{lynge13}.
 
