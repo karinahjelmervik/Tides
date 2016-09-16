@@ -1,0 +1,11 @@
+*.aux
+*.log
+*.pdf
+*.toc
+!met_rapport*.pdf
+*~
+*.zip
+*.tar*
+*.gz
+*.blg
+Toktrapport - forside.tex
