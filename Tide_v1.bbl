@@ -8,13 +8,20 @@ Albretsen, J., Sperrevik, A.~K., Staalstr{\o}m, A., Sandvik, A.~D., Vikeb{\o},
 \newblock Technical Report Fisken og Havet 2/2011, Institute of Marine
   Research, Pb. 1870 Nordnes, N-5817 Bergen, Norway.
 
-\bibitem[Egbert et~al., 1994]{Egbert94}
+\bibitem[Beldring et~al., 2003]{beldring2003}
+Beldring, S., Engeland, K., Roald, L.~A., S{\ae}lthun, N.~R., and Voks{\o}, A.
+  (2003).
+\newblock Estimation of parameters in a distributed precipitation-runoff model
+  for norway.
+\newblock {\em Hydrology and Earth System Sciences Discussions}, 7(3):304--316.
+
+\bibitem[Egbert et~al., 1994]{egbert94}
 Egbert, G.~D., Bennett, A.~F., and Foreman, M.~G. (1994).
 \newblock Topex/poseidon tides estimated using a global inverse model.
 \newblock {\em Journal of Geophysical Research: Oceans (1978--2012)},
   99(C12):24821--24852.
 
-\bibitem[Egbert and Erofeeva, 2002]{Egbert02}
+\bibitem[Egbert and Erofeeva, 2002]{egbert02}
 Egbert, G.~D. and Erofeeva, S.~Y. (2002).
 \newblock Efficient inverse modeling of barotropic ocean tides.
 \newblock {\em Journal of Atmospheric and Oceanic Technology}, 19(2):183--204.
@@ -43,6 +50,14 @@ Lynge, B.~K., Hjelmervik, K., and Gjevik, B. (2013).
 \newblock Storm surge and tidal interaction in the tjeldsund channel, northern
   norway.
 \newblock {\em Ocean Dynamics}, 63(7):723--739.
+
+\bibitem[M{\"u}ller et~al., 2015]{muller2015}
+M{\"u}ller, M., Homleid, M., Ivarsson, K.-I., K{\o}ltzow, M.~A., Lindskog, M.,
+  Andrae, U., Aspelien, T., Bj{\o}rge, D., Dahlgren, P., Kristiansen, J.,
+  Randriamampianina, R., Ridal, M., and Vignes, O. (2015).
+\newblock {AROME}-{M}et{C}o{O}p: {A} {N}ordic convective scale operational
+  weather prediction model.
+\newblock {\em Submitted}, -:--.
 
 \bibitem[Pawlowicz et~al., 2002]{pawlowicz02}
 Pawlowicz, R., Beardsley, B., and Lentz, S. (2002).

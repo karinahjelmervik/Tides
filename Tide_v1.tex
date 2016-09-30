@@ -39,6 +39,7 @@ grestore
 \usepackage{subfigure}
 \usepackage{amssymb}
 \usepackage[latin1]{inputenc}
+\usepackage[usenames]{color}
 
 % Insert the name of "your journal" with
  \journalname{Ocean Dynamics}
@@ -91,44 +92,42 @@ Noe generelt om fjordmodelleringer
 The tides are one of the major driving forces in the fjords. 
 
 The tides are often imposed only on the boundary of the fjord models. Close to the coastline, the tides vary over short distances. The TPXO Atlantic
-database with a horizontal resolution of 1/30$^o$ \cite[]{Egbert94,Egbert02} is too coarse to get the correct phase and amplitude. Here we propose a new method on how to adjust the global tidal forcing to local ocean models. 
-
-
-
+database with a horizontal resolution of 1/30$^o$ \cite[]{egbert94,egbert02} is too coarse to get the correct phase and amplitude. Here we propose a new method on how to adjust the global tidal forcing to local ocean models. 
 
 \section{Area of interest}
 Two areas are chosen in this study in order to investigate if the method handles different types of fjords.
 
-The Oslo fjord is located in the southeastern part of Norway with the main city of Norway in the innermost part of the fjord (Fig.~\ref{fig:area1}). The fjord lies in the most populated area of Norway and it is therefore important to gain knowledge on this fjord. The fjord has an interesting flow pattern due to several river outlets, thresholds, complex topography, storm situations in Skagerak, and atmospheric forcing.
-Even though the mean total tidal elevation is less than 20 cm in the Oslo fjord, the tidal currents are up to 0.5 m/s due to the narrow straits and thresholds.In connection with storm surge events, a maximum amplitude of 70 cm is observed. The Oslo fjord has an open, southern boundary towards Skagerak which lies in the eastern part of the North Sea. The circulation in the Skagerak is anticlockwise with brackish outflow from the Baltic Sea \cite[]{rodhe96,svendsen96}. 
-
-The Saltfjord is located in the northern part of Norway (Fig.~\ref{fig:area2}). Saltstraumen is a small straight at the entrance of the Skjerstad fjord and is counted as the world's strongest tidal currents. The difference between the water level before the narrow straight and after the narrow straight can be up to one meter, causing water speeds up to 11 m/s. \cite[]{eliassen01}
-
-The inner part of the fjord system, the Skjerstad fjord, is a deep glacially carved basin separated from the outer part, the Salt fjord, by a sill in the narrow current named Saltstraumen. This fjord system is generally deep, but the depth from the sill to the mouth of Saltfjorden is less than the depth of the inner part, Skjerstadfjorden. The sill in Saltstraumen is about 50 km from the head of the fjord system. The sill depth is 26 m and the depth in the basin inside the sill is more than 500 m: The inner basin and the sill area are connected by a channel which is much deeper and a little wider than Saltstraumen.
-
-The Norwegian Mapping Authority, Hydrographic Service has 23 tide gauges along the Norwegian coast included one at Spitsbergen. Data is available from 1992 up to the current year. Four of the gauges are placed in the Oslofjord  (Fig.~\ref{fig:area1}) and one close to the open boundary of the Saltfjord.
-
 \begin{figure}[!t]
 \centering
-\includegraphics[width=\textwidth]{fig_Oslofjorden_area}
+\includegraphics[width=0.5\textwidth]{fig_Oslofjorden_area}
 \caption{The Oslo fjord. The position of the four tide gauges in Oslo, Oscarsborg, Viker, and Helgeroa are marked. %The six current meters are marked with blue lowercase letters (a-f)
 .}
 \label{fig:area1}
 \end{figure}
 
+The Oslo fjord is located in the southeastern part of Norway with the main city of Norway in the innermost part of the fjord (Fig.~\ref{fig:area1}). The fjord lies in the most populated area of Norway and it is therefore important to gain knowledge on this fjord. The fjord has an interesting flow pattern due to several river outlets, thresholds, complex topography, storm situations in Skagerak, and atmospheric forcing.
+Even though the mean total tidal elevation is less than 20 cm in the Oslo fjord, the tidal currents are up to 0.5 m/s due to the narrow straits and thresholds.In connection with storm surge events, a maximum amplitude of 70 cm is observed. The Oslo fjord has an open, southern boundary towards Skagerak which lies in the eastern part of the North Sea. The circulation in the Skagerak is anticlockwise with brackish outflow from the Baltic Sea \cite[]{rodhe96,svendsen96}. 
+
+
 \begin{figure}[!t]
 \centering
-\includegraphics[width=\textwidth]{fig_Saltstraumen_area}
+\includegraphics[width=0.8\textwidth]{fig_Saltstraumen_area}
 \caption{The Saltstraumen is a strong current in a narrow passage between the Salt fjord and the Skjerstrad fjord. The position of the tide gauge in Bod\o is marked.}
 \label{fig:area2}
 \end{figure}
+
+The Saltfjord is located in the northern part of Norway (Fig.~\ref{fig:area2}). Saltstraumen is a small straight at the entrance of the Skjerstad fjord and is counted as the world's strongest tidal currents. The difference between the water level before the narrow straight and after the narrow straight can be up to one meter, causing water speeds up to 11 m/s. \cite[]{eliassen01}
+
+The inner part of the fjord system, the Skjerstad fjord, is a deep glacially carved basin separated from the outer part, the Salt fjord, by a sill in the narrow current named Saltstraumen. This fjord system is generally deep, but the depth from the sill to the mouth of Saltfjorden is less than the depth of the inner part, Skjerstadfjorden. The sill in Saltstraumen is about 50 km from the head of the fjord system. The sill depth is 26 m and the depth in the basin inside the sill is more than 500 m: The inner basin and the sill area are connected by a channel which is much deeper and a little wider than Saltstraumen.
+
+The Norwegian Mapping Authority, Hydrographic Service has 23 tide gauges along the Norwegian coast included one at Spitsbergen. Data is available from 1992 up to the current year. Four of the gauges are placed in the Oslofjord  (Fig.~\ref{fig:area1}) and one close to the open boundary of the Salt fjord (Fig.~\ref{fig:area2}).
 
 
 \section{Model setup}
 
 The Regional Ocean Model System (ROMS) version 3.6 is applied for both fjords as described in \cite{roed16}. ROMS is a free-surface, terrain-following, primitive equations ocean model widely used by the scientific community for a diverse range of applications \cite[]{shchepetkin05,shchepetkin09,haidvogel08}. 
 
-The fjord models are nested into the NorKyst800 model \cite[]{albretsen11} through daily means. The NorKyst800 model covers the whole Norwegian coast with a resolution of 800 meters. Despite NorKyst800s relatively high resolution it is still not fine enough to resolve the highly irregular geometry and topography of most Norwegian fjords (see Fig.~\ref{fig:NorKyst}). 
+The fjord models are nested into the NorKyst800 model \cite[]{albretsen11} through daily means. \textcolor{Red}{[}The NorKyst800 model covers the whole Norwegian coast with a resolution of 800 meters. Despite NorKyst800s relatively high resolution it is still not fine enough to resolve the highly irregular geometry and topography of most Norwegian fjords (see Fig.~\ref{fig:NorKyst}). - \textcolor{Red}{fjernes?]}
 
 For both fjords high-resolution, curvilinear grids are applied with 42 terrain-following layers in the vertical using a continuous, double stretching function following \cite{shchepetkin09}. Water levels less than two meters are set to zero. Thereby the shallow parts of the fjords are omitted. In order to avoid model instability and/or spurious deep currents the final masked bathymetry is smoothed as described in \cite{roed16}.
 
@@ -150,37 +149,41 @@ For both fjords high-resolution, curvilinear grids are applied with 42 terrain-f
 \begin{figure}[!t]
 \centering
 %\includegraphics[width=0.4\textwidth]{Figurer/GridSize}
-\caption{NorKyst area.}
+\caption{NorKyst area \textcolor{Red}{- fjernes?}}
 \label{fig:NorKyst}
 \end{figure}
 
-The necessary atmospheric input (wind, pressure, temperature, humidity, and cloud cover) is extracted from the AROME-MetCoOp model with a grid resolution of 2.5 km (Müller et al., 2015). The freshwater discharges to are taken data from a database constructed by use of the hydrological model HBV (Beldring et al., 2003).
+The necessary atmospheric input (wind, pressure, temperature, humidity, and cloud cover) is extracted from the AROME-MetCoOp model with a grid resolution of 2.5 km \cite[]{muller2015}. The freshwater discharges to are taken data from a database constructed by use of the hydrological model HBV \cite[]{beldring2003}.
 
-The tidal input in terms of tidal elevations and currents are based on the TPXO Atlantic database \cite[]{Egbert02} for the Oslofjord model. Due to technicalities the TPXO 7.2 were applied for the Saltfjord model. The tidal forcing is to coarse for fjord modeling since the tides vary over short distances and a simple interpolation to the model grid might not be sufficient close to the coast line. In order to omit this problem, other fjord models applies tidal amplitude and phase from observed water level close to the boundary \cite[i.e.]{svendsen96,lynge13}. In the ROMS model it is preferable to include the tidal current major amplitude, minor amplitude, phase, and inclination angle. Here we propose a method on how to adjust the global tidal forcing in terms of both elevation and currents, to local ocean models. 
+The tidal input in terms of tidal elevations and currents are based on the TPXO Atlantic database \cite[]{egbert02} for the Oslofjord model. Due to technicalities the TPXO 7.2 were applied for the Saltfjord model. The tidal forcing is to coarse for fjord modeling since the tides vary over short distances and a simple interpolation to the model grid might not be sufficient close to the coast line. In order to omit this problem, other fjord models applies tidal amplitude and phase from observed water level close to the boundary \cite[i.e.]{svendsen96,lynge13}. In the ROMS model it is preferable to include the tidal current major amplitude, minor amplitude, phase, and inclination angle. Here we propose a method on how to adjust the global tidal forcing in terms of both elevation and currents, to local ocean models. 
 
 \section{Method}
 
-The method is straight forward. First the tidal forcing, the Atlantic TPXO with a resolution of 1/30 degree or the TPXO 7.2 with a resolution of 1/4 degree, were imposed at the open boundaries of the fjord models. The simulated time period is 180 days. Time series of observed and modelled water level from locations close to the tidal gauge stations close to the open boundaries, were extracted and analysed based on the T\_Tide package described by \cite{pawlowicz02}. For the Oslofjord model, observed and modelled water level are extracted from a location near Viker which lies inside the model domain. For the Saltfjord model, observed and modelled water level are extracted from a location near Bod\o which lies outside the model domain. Ten major tide constitutents of diurnal (K$_1$, P$_1$, and O$_1$), semidiurnal (K$_2$, S$_2$, M$_2$, and N$_2$), and quarter-diurnal (MN$_4$, M$_4$, and MS$_4$) frequencies are retrieved from the observed and modelled time series. 
+The method is straight forward. First the tidal forcing, the Atlantic TPXO with a resolution of 1/30 degree for the Oslofjord model and the TPXO 7.2 with a resolution of 1/4 degree for the Saltfjord model, were imposed at the open boundaries of the fjord models. The simulated time period is 180 days. 
 
-To better match the observations, the tidal amplitudes and corresponding phase were modified by computing an amplitude factor, $c^{(n)}$, and a phase shift, $\triangle \phi^{(n)}$, for each tidal component according to :
+Time series of observed and simulated water level from locations close to the tidal gauge stations close to the open boundaries, were extracted and analysed based on the T\_Tide package described by \cite{pawlowicz02}. For the Oslofjord model, observed and modelled water level are extracted from a location near Viker which lies inside the model domain. For the Saltfjord model, observed and modelled water level are extracted from a location near Bod\o which lies slightly outside the model domain. Ten major tide constitutents of diurnal (K$_1$, P$_1$, and O$_1$), semidiurnal (K$_2$, S$_2$, M$_2$, and N$_2$), and quarter-diurnal (MN$_4$, M$_4$, and MS$_4$) frequencies are retrieved from the observed and modelled time series. 
+
+To better match the observations, the tidal amplitudes and corresponding phase were modified by computing an amplitude factor, $c^{(n)}$, and a phase shift, $\triangle \phi^{(n)}$, for each tidal component $n$ for the water level according to:
 \begin{eqnarray}
 c^{(n)} &=& \frac{a^{(n)}_{obs}}{a^{(n)}_{sim}} \\
 \triangle \phi^{(n)} &=& \phi^{(n)}_{obs} - \phi^{(n)}_{sim}
 \end{eqnarray}
-where $a^{(n)}$ is the amplitude and $\phi^{(n)}$ the phase for tidal component $n$ of the water level. 
+$a^{(n)}_{obs}$ and $a{(n)}_{sim}$ are the observed and simulated amplitude respectively. $\phi^{(n)}_{obs}$ and $\phi^{(n)}_{sim}$ are the observed and simulated phase respectively.. 
 
 New amplitudes and phases at the boundary were then calculated using the computed factors and phase shifts on both water level and velocity. The new amplitudes and phases imposed at the open boundaries of new simulations where taken as:
 \begin{eqnarray}
-a^{(n)}_{new} &=& a^{(n)} a{(n)} \\
-\phi^{(n)}_{new} &=& \phi^{(n)} + \triangle \phi^{(n)}
+a^{(n)}_{i2} &=& a^{(n)}_{i1} c^{(n)} \\
+\phi^{(n)}_{i2} &=& \phi^{(n)}_{i1} + \triangle \phi^{(n)}
 \end{eqnarray}
-where $a^{(n)}$ and $\phi^{(n)}$ are the amplitude and phase originally imposed on the boundary. Modified amplitude and phase for the tidal current are adjusted in the same way.
+$a^{(n)}_{i1}$ and $\phi^{(n)}_{i1}$ are the amplitude and phase originally imposed on grid cell $i$ along the boundary. Modified major and minor amplitude and phase for the tidal current are adjusted in the same way using the amplitude factor and phase shift calculated from the water level. The inclination angles are not adjusted.
 
-The new results were then analysed as for the first run.
+The models are then rerun with the adjusted tidal forcing. The results are then analysed as for the first run and  compared with observed tidal water level. 
 
 \section{Discussion and results}
 
-Time series from this initial run with coarse tidal forcing on the boundary, are then analysed using T\_tide, and compared with observed tidal water level close to the open boundary. Here is the observed tidal water level in red and the simulated tidal water level in black. As you can see the amplitudes are not correct and also the phase is a little bit off.
+\textcolor{Red}{Her er det mye rot. Arbeider med å rydde. Karina}
+
+Here is the observed tidal water level in red and the simulated tidal water level in black. As you can see the amplitudes are not correct and also the phase is a little bit off.
 
 Nine tidal constitutes are included in the tidal forcing. As you can see the difference in observed and simulated amplitude for M2 is 2 cm and the phase difference 12 degrees. Based on that we calculate the ratio and the phase difference, and apply it on the tidal forcing.
 
@@ -243,6 +246,8 @@ MS$_4$  &  6.1033 &  0.5 &  0.3 &   57 &   32 &  2.2 &  0.4 &  135 &   11 &  1.3
 %They are caused by the high velocity water coming out from Saltstraumen on the falling tide, where the velocity reaches a maximum of about 4 m s1: The anti-cyclonic vortex is weaker when the tide is rising, but does not reverse direction. The cyclonic vortex almost vanishes on rising tides. These results are in accordance with the results from Resipientunderskelse (Anon., 1990) where a direct measurement of the velocity field was performed over a time period of 10 days.
 
 \section{Conclusion}
+
+\textcolor{Red}{Skrives til sist}
 
 Accurate tidal forcing is important in fjord models...
 
