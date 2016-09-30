@@ -84,13 +84,14 @@ The method is tested in the Regional Ocean Model System (ROMS) on two different 
 
 \section{Introduction}
 
-Tides are the dominant contributor to sea level variations along the Norwegian coast \cite[]{grabbe09}. The exception are storm surge events \cite[]{lynge13}.
+Tides are one of the dominant contributor to sea level variations along the Norwegian coast \cite[]{grabbe09}. The exception are storm surge events \cite[]{lynge13}.
 
 Noe generelt om fjordmodelleringer
 
 The tides are one of the major driving forces in the fjords. 
 
-The tides are often imposed only on the boundary of the fjord models. Close to the coastline, the tides vary over short distances. The global tidal forcing with a horizontal resolution of 1/4$^o$ \cite[]{Egbert94,Egbert02} is to coarse for fjord modeling. Here we propose a new method on how to adjust the global tidal forcing to local ocean models. 
+The tides are often imposed only on the boundary of the fjord models. Close to the coastline, the tides vary over short distances. The TPXO Atlantic
+database with a horizontal resolution of 1/30$^o$ \cite[]{Egbert94,Egbert02} is too coarse to get the correct phase and amplitude. Here we propose a new method on how to adjust the global tidal forcing to local ocean models. 
 
 
 
@@ -115,7 +116,7 @@ The Norwegian Mapping Authority, Hydrographic Service has 23 tide gauges along t
 
 \begin{figure}[!t]
 \centering
-%\includegraphics[width=\textwidth]{Figurer/area1}
+\includegraphics[width=\textwidth]{fig_Oslofjorden_area}
 \caption{The Oslo fjord. The position of the four tide gauges in Oslo (A), Oscarsborg (B), Viker (C), and Helgeroa (D) are marked with red capital letters. %The six current meters are marked with blue lowercase letters (a-f)
 .}
 \label{fig:area1}
@@ -123,7 +124,7 @@ The Norwegian Mapping Authority, Hydrographic Service has 23 tide gauges along t
 
 \begin{figure}[!t]
 \centering
-%\includegraphics[width=\textwidth]{Figurer/area2}
+\includegraphics[width=\textwidth]{fig_Saltstraumen_area}
 \caption{The Salt and Skjerstrad fjord. The position of the tide gauge in Bod\o is marked with a red capital letter.
 .}
 \label{fig:area2}
@@ -162,11 +163,11 @@ For both fjords high-resolution, curvilinear grids are applied with 42 terrain-f
 
 The necessary atmospheric input (wind, pressure, temperature, humidity, and cloud cover) is extracted from the AROME-MetCoOp model with a grid resolution of 2.5 km (Müller et al., 2015). The freshwater discharges to are taken data from a database constructed by use of the hydrological model HBV (Beldring et al., 2003).
 
-The tidal forcing is obtained from the global, inverse barotropic tidal model (TPXO) with a horizontal resolution of 1/4$^o$ \cite[]{Egbert94,Egbert02}. The tidal forcing is to coarse for fjord modeling since the tides vary over short distances and a simple interpolation to the model grid might not be sufficient close to the coast line. In order to omit this problem, other fjord models applies tidal amplitude and phase from observed water level close to the boundary \cite[i.e.]{svendsen96,lynge13}. In the ROMS model it is preferable to include the tidal current major amplitude, minor amplitude, phase, and inclination angle. Here we propose a method on how to adjust the global tidal forcing in terms of both elevation and currents, to local ocean models. 
+The tidal input in terms of tidal elevations and currents are based on the TPXO Atlantic database \cite[]{Egbert02} for the Oslofjord model. Due to technicalities the TPXO 7.2 were applied for the Saltfjord model. The tidal forcing is to coarse for fjord modeling since the tides vary over short distances and a simple interpolation to the model grid might not be sufficient close to the coast line. In order to omit this problem, other fjord models applies tidal amplitude and phase from observed water level close to the boundary \cite[i.e.]{svendsen96,lynge13}. In the ROMS model it is preferable to include the tidal current major amplitude, minor amplitude, phase, and inclination angle. Here we propose a method on how to adjust the global tidal forcing in terms of both elevation and currents, to local ocean models. 
 
 \section{Method}
 
-The method is straight forward. First the global tidal forcing, here the global TPXO with a resolution of 1/4 degree were imposed at the open boundaries of the fjord models. The simulated time period is 180 days. Time series of observed and modelled water level from locations close to the tidal gauge stations close to the open boundaries, were extracted and analysed based on the T\_Tide package described by \cite{pawlowicz02}. For the Oslofjord model, observed and modelled water level are extracted from a location near Viker which lies inside the model domain. For the Saltfjord model, observed and modelled water level are extracted from a location near Bod\o which lies outside the model domain. Ten major tide constitutents of diurnal (K$_1$, P$_1$, and O$_1$), semidiurnal (K$_2$, S$_2$, M$_2$, and N$_2$), and quarter-diurnal (MN$_4$, M$_4$, and MS$_4$) frequencies are retrieved from the observed and modelled time series. 
+The method is straight forward. First the tidal forcing, the Atlantic TPXO with a resolution of 1/30 degree or the TPXO 7.2 with a resolution of 1/4 degree, were imposed at the open boundaries of the fjord models. The simulated time period is 180 days. Time series of observed and modelled water level from locations close to the tidal gauge stations close to the open boundaries, were extracted and analysed based on the T\_Tide package described by \cite{pawlowicz02}. For the Oslofjord model, observed and modelled water level are extracted from a location near Viker which lies inside the model domain. For the Saltfjord model, observed and modelled water level are extracted from a location near Bod\o which lies outside the model domain. Ten major tide constitutents of diurnal (K$_1$, P$_1$, and O$_1$), semidiurnal (K$_2$, S$_2$, M$_2$, and N$_2$), and quarter-diurnal (MN$_4$, M$_4$, and MS$_4$) frequencies are retrieved from the observed and modelled time series. 
 
 To better match the observations, the tidal amplitudes and corresponding phase were modified by computing an amplitude factor, $c^{(n)}$, and a phase shift, $\triangle \phi^{(n)}$, for each tidal component according to :
 \begin{eqnarray}
