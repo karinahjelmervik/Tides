@@ -195,6 +195,18 @@ The tidal current components vary across the fjord.... \cite{lynge13}.
 
 The resulting new tidal amplitudes and periods for the locations close to the Viker and Oscarsborg tidal gauge stations are shown in Tables 3 and 4 in column Modified. The results are clearly improved at both stations. In particular we are pleased with the results close to the Oscarsborg tidal gauge station which may be viewed as a control station in that it is far away from the southern boundary where the tidal forcing is imposed.
 
+Fields of the amplitude and phase for M$_2$ reveal som interesting phenomenas (Figure \ref{fig:Oslofjord_tidal_fields}). North of the western branch of the Oslo fjord the amplitude decreases as the water has to pass through a very narrow passage called Svelvikstraumen. North of the eastern branch the amplitude increases. The phase is more delayed north of the eastern branch than the western branch. The observed phase delay is more pronounced in the observations than the model. \textcolor{Red}{B{\o}r sette inn noen tall fra tabellene}
+
+
+\begin{figure}[!t]
+\centering
+\includegraphics[trim=1cm 1cm 0cm 0cm,clip=true,width=0.49\textwidth]{fig_Oslofjorden_M2amp.eps}
+\includegraphics[trim=1cm 1cm 0cm 0cm,clip=true,width=0.49\textwidth]{fig_Oslofjorden_M2phase.eps}
+%\includegraphics[width=0.33\textwidth]{fig_Oslofjorden_M2camp.eps}
+\caption{Fields of M$_2$ water level amplitude and phase in the Oslo fjord. The corresponding observed values are indicated by colored cirles at the three permanent gauges in the area.}
+\label{fig:Oslofjord_tidal_fields}
+\end{figure}
+
 \begin{table}[ht]
 %\vspace{-1.5cm}
 \caption{Tidal amplitudes [cm] and phases [deg] for the water level at Viker}
@@ -224,8 +236,8 @@ MS$_4$  &  6.1033 &  0.4 &  0.2 &    5 &   28 &  1.1 &  0.2 &  111 &   12 &  0.6
 \begin{tabular}{@{}c@{$\;\;$}r@{$\;\;$}r@{$\;\pm\;$}rr@{$\;\pm\;$}rr@{$\;\pm\;$}rr@{$\;\pm\;$}rr@{$\;\pm\;$}rr@{$\;\pm\;$}r} \hline
       & Period & \multicolumn{4}{c}{Observed} & \multicolumn{4}{c}{Run 1} & \multicolumn{4}{c}{Run 2} \\
 Comp. & [h] $\;\;$ & \multicolumn{2}{c}{[cm]} & \multicolumn{2}{c}{[deg]} & \multicolumn{2}{c}{[cm]} & \multicolumn{2}{c}{[deg]} & \multicolumn{2}{c}{[cm]} & \multicolumn{2}{c}{[deg]} \\ \hline 
-S$_2 $  & 12.0000 &  2.7 &  0.8 &   70 &   18 &  6.1 &  1.3 &   85 &   11 &  3.7 &  0.4 &   70 &    7 \\ 
-M$_2$4   & 12.4206 & 14.1 &  0.7 &  132 &    3 & 11.1 &  1.2 &  128 &    7 & 13.7 &  0.3 &  111 &    2 \\ 
+S$_2$  & 12.0000 &  2.7 &  0.8 &   70 &   18 &  6.1 &  1.3 &   85 &   11 &  3.7 &  0.4 &   70 &    7 \\ 
+M$_2$   & 12.4206 & 14.1 &  0.7 &  132 &    3 & 11.1 &  1.2 &  128 &    7 & 13.7 &  0.3 &  111 &    2 \\ 
 N$_2$   & 12.6583 &  3.0 &  0.8 &   85 &   15 &  6.6 &  1.4 &   86 &   10 &  3.6 &  0.4 &   75 &    6 \\ 
 K$_1$   & 23.9345 &  1.2 &  0.5 &  101 &   35 &  1.1 &  0.5 &  213 &   27 &  0.1 &  0.2 &   44 &   79 \\ 
 O$_1$   & 25.8193 &  2.1 &  0.7 &  286 &   17 &  3.9 &  0.5 &   21 &    8 &  3.1 &  0.2 &  340 &    4 \\ 
@@ -237,9 +249,47 @@ MS$_4$  &  6.1033 &  0.5 &  0.3 &   57 &   32 &  2.2 &  0.4 &  135 &   11 &  1.3
 \end{tabular}
 \end{table}
 
+The presence of Saltstraumen as a major impact on the circulation in the Salt fjord. According to \cite{svendsen96} an anticyclonic vortex is formed to the northeast of Saltstraumen, and a cyclonic vortex to the northwest.
 % Fra Svendsen et. al 1996
-%The circulation in Saltfjorden is much influenced by the presence of Saltstraumen. An anticyclonic vortex is formed to the northeast of Saltstraumen, and a cyclonic vortex to the northwest.
 %They are caused by the high velocity water coming out from Saltstraumen on the falling tide, where the velocity reaches a maximum of about 4 m s1: The anti-cyclonic vortex is weaker when the tide is rising, but does not reverse direction. The cyclonic vortex almost vanishes on rising tides. These results are in accordance with the results from Resipientunderskelse (Anon., 1990) where a direct measurement of the velocity field was performed over a time period of 10 days.
+
+The modelled water level at Bod{\o} from the run with TPXO 7.2 applied as tidal forcing, the tidal amplitudes were too small and the phase was shifted forward in time (Figure \ref{fig:Saltstraumen_timeseries}). The adjustment factor and phase shift was computed for every tidal component based on harmonic analyses and the adjusted tidal forcing was computed. When the model was rerun, the modelled water level at Bod{\o} was more similar to the observations, but still too small. The error in phase for M$_2$ was only 0.8 degrees which corresponds to three minutes (Table \ref{tab:Bodo}).
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\textwidth]{fig_Saltstraumen_timeseries}
+\caption{Time series of water level at a position close to Bod\o}
+\label{fig:Saltstraumen_timeseries}
+\end{figure}
+
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\textwidth]{fig_Saltstraumen_M2amp}
+\includegraphics[width=\textwidth]{fig_Saltstraumen_M2phase}
+\caption{Fields of M$_2$ water level amplitude and phase in the Salt and Skjerstad fjords.}
+\label{fig:Saltstraumen_field}
+\end{figure}
+
+\begin{table}[ht]
+%\vspace{-1.5cm}
+\caption{Tidal amplitudes [cm] and phases [deg] for the water level at Bod{\o} together with adjustment factor $c$ and phase shift $\triangle \phi$ for each component}
+\label{tab:Bodo}
+\centering
+\begin{tabular}{crrrrrrrrrr} \hline
+      & Period & \multicolumn{2}{c}{Observed} & \multicolumn{2}{c}{Run 1} & \multicolumn{2}{c}{Run 2} & \multicolumn{2}{c}{Adjustment} \\
+Comp. & [h] $\;\;$ & [cm] & [deg] & [cm] & [deg] & [cm] & [deg] & $c\;\;$ & $\triangle \phi$  \\ \hline 
+S$_2$   & 12.0000  &  30.0 &      8   &  19.1 &     16   &  28.1 &      7    &   1.570  &    -7.2   \\ 
+M$_2$   & 12.4206  &  87.3 &    331   &  60.0 &    301   &  78.3 &    330    &   1.454  &    29.8   \\ 
+N$_2$   & 12.6584  &  18.5 &    308   &  12.7 &    271   &  16.7 &    309    &   1.461  &    37.2   \\ 
+K$_1$   & 23.9345  &  10.8 &    194   &   8.8 &    183   &  10.7 &    194    &   1.225  &    11.5   \\ 
+O$_1$   & 25.8193  &   3.8 &     33   &   3.3 &     39   &   3.7 &     33    &   1.154  &    -6.1   \\ 
+MN$_4$  &  6.2692  &   1.5 &    229   &   0.4 &    122   &   1.5 &    228    &   3.000  &   106.9   \\ 
+M$_4$   &  6.2103  &   2.7 &    268   &   3.3 &    159   &   3.1 &    283    &   0.808  &   109.5   \\ 
+MS$_4$  &  6.1033  &   1.3 &      2   &   1.5 &    152   &   1.4 &     30    &   0.861  &  -149.6   \\ \hline
+\end{tabular}
+\end{table}
+
 
 \section{Conclusion}
 
