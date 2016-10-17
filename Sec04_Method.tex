@@ -1,0 +1,21 @@
+\section{Method}
+
+The method is straight forward. First the tidal forcing, the Atlantic TPXO with a resolution of 1/30 degree for the Oslofjord model and the TPXO 7.2 with a resolution of 1/4 degree for the Saltfjord model, were imposed at the open boundaries of the fjord models. The simulated time period is 180 days. 
+
+Time series of observed and simulated water level from locations close to the tidal gauge stations close to the open boundaries, were extracted and analysed based on the T\_Tide package described by \cite{pawlowicz02}. For the Oslofjord model, observed and modelled water level are extracted from a location near Viker which lies inside the model domain. For the Saltfjord model, observed and modelled water level are extracted from a location near Bod\o which lies slightly outside the model domain. Ten major tide constitutents of diurnal (K$_1$, P$_1$, and O$_1$), semidiurnal (K$_2$, S$_2$, M$_2$, and N$_2$), and quarter-diurnal (MN$_4$, M$_4$, and MS$_4$) frequencies are retrieved from the observed and modelled time series. 
+
+To better match the observations, the tidal amplitudes and corresponding phase were modified by computing an amplitude factor, $c^{(n)}$, and a phase shift, $\triangle \phi^{(n)}$, for each tidal component $n$ for the water level according to:
+\begin{eqnarray}
+c^{(n)} &=& \frac{a^{(n)}_{obs}}{a^{(n)}_{sim}} \\
+\triangle \phi^{(n)} &=& \phi^{(n)}_{obs} - \phi^{(n)}_{sim}
+\end{eqnarray}
+$a^{(n)}_{obs}$ and $a{(n)}_{sim}$ are the observed and simulated amplitude respectively. $\phi^{(n)}_{obs}$ and $\phi^{(n)}_{sim}$ are the observed and simulated phase respectively.. 
+
+New amplitudes and phases at the boundary were then calculated using the computed factors and phase shifts on both water level and velocity. The new amplitudes and phases imposed at the open boundaries of new simulations where taken as:
+\begin{eqnarray}
+a^{(n)}_{i2} &=& a^{(n)}_{i1} c^{(n)} \\
+\phi^{(n)}_{i2} &=& \phi^{(n)}_{i1} + \triangle \phi^{(n)}
+\end{eqnarray}
+$a^{(n)}_{i1}$ and $\phi^{(n)}_{i1}$ are the amplitude and phase originally imposed on grid cell $i$ along the boundary. Modified major and minor amplitude and phase for the tidal current are adjusted in the same way using the amplitude factor and phase shift calculated from the water level. The inclination angles are not adjusted.
+
+The models are then rerun with the adjusted tidal forcing. The results are then analysed as for the first run and  compared with observed tidal water level. 
