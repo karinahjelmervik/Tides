@@ -1,8 +1,8 @@
 \section{Method}
 
-The global and Atlantic tidal solutions are to coarse for fjord modelling since the tides vary over short distances. A simple interpolation to the model grid might not be sufficient close to the coast because the coastline itself, and the fjord we are interrested in, is not properly resolved. In order to omit this problem, other fjord models applies tidal amplitude and phase from observed water level close to the boundary \cite[i.e.]{svendsen96,lynge13}. In the ROMS model it is preferable to include the tidal current major amplitude, minor amplitude, phase, and inclination angle. Here we propose a method on how to adjust the global tidal forcing in terms of both elevation and currents, to local ocean models. 
+The global and Atlantic tidal solutions are to coarse for fjord modelling since the tides vary over short distances. A simple interpolation to the model grid might not be sufficient close to the coast because fjords and the coastline itself are not properly resolved. In order to omit this problem, other fjord models applies tidal amplitude and phase from observed water level close to the boundary \cite[i.e.]{svendsen96,lynge13}. In the ROMS model it is preferable to include the tidal current major amplitude, minor amplitude, phase, and inclination angle. Here we propose a method on how to adjust the global tidal forcing in terms of both elevation and currents, to local ocean models. 
 
-The criterion for this method to work properly is that the open boundary should be as parallel as possible to the face of the tidal wave, or that the width of the open boundary is small enough for the phase shift along the boundary is neglectible. There must also be tidal observations available at, or close to, the boundary.
+The criterion for this method to work properly is that the open boundary should be as parallel as possible to the face of the tidal wave, or that the width of the open boundary is small enough for the phase shift along the boundary is negligible. There must also be tidal observations available at, or close to, the boundary.
 
 The method is straight forward. First the tidal forcing, the Atlantic TPXO with a resolution of 1/30 degree for the Oslofjord model and the global TPXO with a resolution of 1/4 degree for the Saltstraumen model, were imposed at the open boundaries of the fjord models. The simulated time period is 180 days. 
 
@@ -13,7 +13,7 @@ To better match the observations, the tidal amplitudes and corresponding phase w
 c^{(n)} &=& \frac{a^{(n)}_{obs}}{a^{(n)}_{sim}} \\
 \triangle \phi^{(n)} &=& \phi^{(n)}_{obs} - \phi^{(n)}_{sim}
 \end{eqnarray}
-$a^{(n)}_{obs}$ and $a{(n)}_{sim}$ are the observed and simulated amplitude respectively. $\phi^{(n)}_{obs}$ and $\phi^{(n)}_{sim}$ are the observed and simulated phase respectively.. 
+$a^{(n)}_{obs}$ and $a{(n)}_{sim}$ are the observed and simulated amplitude respectively. $\phi^{(n)}_{obs}$ and $\phi^{(n)}_{sim}$ are the observed and simulated phase respectively. 
 
 New amplitudes and phases at the boundary were then calculated using the computed factors and phase shifts on both water level and velocity. The new amplitudes and phases imposed at the open boundaries of new simulations where taken as:
 \begin{eqnarray}
@@ -22,4 +22,4 @@ a^{(n)}_{i2} &=& a^{(n)}_{i1} c^{(n)} \\
 \end{eqnarray}
 $a^{(n)}_{i1}$ and $\phi^{(n)}_{i1}$ are the amplitude and phase originally imposed on grid cell $i$ along the boundary. Modified major and minor amplitude and phase for the tidal current are adjusted in the same way using the amplitude factor and phase shift calculated from the water level. The inclination angles are not adjusted.
 
-After the adjusted tidal forcing is generated, both of the models are rerun using the new tidal forcing. The results are then analysed the same way as for the first run, and compared with observed tidal water level. 
+After the adjusted tidal forcing is generated, both models are rerun using the new tidal forcing. The results are then analysed the same way as for the first run, and compared with observed tidal water level. 
