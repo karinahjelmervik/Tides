@@ -2,7 +2,7 @@
 
 The Regional Ocean Model System (ROMS) version 3.6 is applied for both fjords as described in \cite{roed16}. ROMS is a free-surface, terrain-following, primitive equations ocean model widely used by the scientific community for a diverse range of applications \cite[]{shchepetkin05,shchepetkin09,haidvogel08}. 
 
-Both fjord models utilize high-resolution, curvilinear horizontal grids, and terrain-following sigma layers in the vertical using a continuous, double stretching function following \cite{shchepetkin09}. The Oslofjord and Saltstraumen models have 42 and 20 vertical layers, respectively. The minimum depth is set to two meters, and for stability reasons some shallow parts of the fjords are omitted. In order to avoid model instability and/or spurious deep currents, the final masked bathymetry is smoothed as described in \cite{roed16}.
+Both fjord models utilize high-resolution, curvilinear horizontal grids, and terrain-following sigma layers in the vertical using a continuous, double stretching function following \cite{shchepetkin09}. The Oslofjord and Saltstraum models have 42 and 20 vertical layers, respectively. The minimum depth is set to two meters, and for stability reasons some shallow parts of the fjords are omitted. In order to avoid model instability and/or spurious deep currents, the final masked bathymetry is smoothed as described in \cite{roed16}.
 
 %In the horizontal a curvilinear grid with varying grid size is applied (Fig.~\ref{fig:GridSize}). The characteristic grid size, $\Delta s_{i,j}$, is taken as:
 %\begin{eqnarray}
@@ -21,8 +21,8 @@ Both fjord models utilize high-resolution, curvilinear horizontal grids, and ter
 
 The two models have slightly different setup with regards to the external forcing that is applied; the Oslofjord model is run with all realistic forcing, whereas the Saltstraumen model is a pure tidal model. 
 
-The necessary atmospheric input (wind, pressure, temperature, humidity and cloud cover) for the Oslofjord model is extracted from the AROME-MetCoOp model with a grid resolution of 2.5 km \cite[]{muller2015}. Freshwater discharges (rivers) are taken from a database constructed by use of the hydrological model HBV \cite[]{beldring2003}. At the open boundary to the south, the model is nested offline into the NorKyst800 model \cite[]{albretsen11} through daily means of temperature, salinity, currents etc.
+The necessary atmospheric input (wind, pressure, temperature, humidity, and cloud cover) for the Oslofjord model is extracted from the AROME-MetCoOp model with a grid resolution of 2.5 km \cite[]{muller2015}. Freshwater discharges (rivers) are taken from a database constructed by use of the hydrological model HBV \cite[]{beldring2003}. At the open boundary to the south, the model is nested offline into the NorKyst800 model \cite[]{albretsen11} through daily means of temperature, salinity, currents etc.
 
-For the Saltstraumen model, the values at the open boundary to the west is set to constant, based on a one year climatology from the NorKyst800 model. No atmospheric forcing or river inputs were applied.
+For the Saltstraum model, the values at the open boundary to the west is set to constant, based on a one year climatology from the NorKyst800 model. No atmospheric forcing or river inputs were applied.
 
-The tidal forcing in terms of tidal elevations and currents are based on the TPXO 7.2 Atlantic database \cite[]{egbert02} for the Oslofjord model and the global TPXO 7.2 atlas was applied for the Saltstraumen model. 
+The tidal forcing in terms of tidal elevations and currents are based on the TPXO 7.2 Atlantic database \cite[]{egbert02} for the Oslofjord model and the global TPXO 7.2 atlas was applied for the Saltstraum model. 
