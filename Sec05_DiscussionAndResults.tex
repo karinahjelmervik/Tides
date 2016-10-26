@@ -1,12 +1,16 @@
 \section{Discussion and results}
 
-Both fjord models are run twice. The first run use the original tidal forcing, as generated directly from the TPXO atlases, and the second run with the adjusted tidal forcing. The results improved for both the Oslofjord, and for the Saltstraum. The results for the Oslofjord can be viewed in Table \ref{tab:Viker} \& \ref{tab:Oscarsborg}. In Table \ref{tab:Viker} we show that the adjustment has the desired effect close to the open boundary, while Table \ref{tab:Oscarsborg} shows that the simulated tides are distributed as intended in the inner parts of the fjord. For the Salstraum, Table \ref{tab:Bodo} shows that the amplitudes are still too small in the second run, but closer to the observed values than the first run. The error in phase for M$_2$ was only $0.8$ degrees which corresponds to three minutes (Table \ref{tab:Bodo}).
+Both fjord models are run twice. The first run use the original tidal forcing, as generated directly from the TPXO atlases, and the second run with the adjusted tidal forcing. The results improved for both the Oslofjord, and for the Saltstraum. 
+
+In the first run with the Oslofjord model, the amplitudes did not match and the maximums appeared too late in time (see Figure \ref{fig:Viker_timeseries}). In the second run the both phases and amplitudes improved. Table \ref{tab:Viker} shows that the adjustments had the desired effect close to the open boundary, while Table \ref{tab:Oscarsborg} shows that the simulated tides are distributed as intended in the inner parts of the fjord. 
+
+For the Salstraum, time series reveal that the amplitudes are too small and the maximums appeared too early (see Figure \ref{fig:Saltstraumen_timeseries}). Table \ref{tab:Bodo} shows that the amplitudes are still too small in the second run, but closer to the observed values than the first run. The error in phase for M$_2$ was only $0.8$ degrees which corresponds to three minutes (Table\-\ref{tab:Bodo}).
 
 The barotropic tide propagates with a phase speed of $c = \omega/k \approx \sqrt{g h_c}$ where $g$ is the acceleration of gravity and $h_c$ is the characteristic depth. The distance from Viker to Oscarsborg is approximately 75 km and the mean depth is around 200 meters which gives an approximate phase speed of 44 m/s and a phase lag of approximately 28 minutes. According to Table \ref{tab:Viker} and \ref{tab:Oscarsborg} the observed phase lag is 17 degrees for M$_2$ which corresponds to 35 minutes which is only slightly longer than the approximate theoretical phase lag. 
 
 Fields of the amplitude and phase for M$_2$ in the Oslofjord reveal some interesting phenomenas (Figure \ref{fig:Oslofjord_tidal_fields}). The M$_2$ amplitude decreases gradually northward from the open boundary in the south.  In the western branch the amplitude decreases as the water pass through the very narrow passage called Svelvikstraumen, while the amplitude increases north of the sill in the eastern branch. The M$_2$ phase decreases in the eastern branch, but increases in the western branch. The observed phase delay is more pronounced in the observations than in the model. The cause is most probably the smoothing of the topography in the model.
 
-The spatial variation is larger in the Saltstraum model. Outside the Saltstraum, the narrow straight separating the two fjords, the M$_2$ amplitude is quite uniformly at approximately $80$ cm, while on the inside it is only about $35$ cm. The corresponding phase delay is approximately $60$ degrees. Unfortunately, there is no availale tidal gauges inside of the Saltstraum.
+The spatial variation is larger in the Saltstraum model. Outside the Saltstraum, the narrow straight separating the two fjords, the M$_2$ amplitude is quite uniform at approximately $80$ cm, while on the inside it is only about $35$ cm. The corresponding phase delay is approximately $60$ degrees. Unfortunately, there is no availale tidal gauges inside of the Saltstraum.
 %, so we have no means of validating whether or not these values are correct. But we can speculate that we would se similar inconsistencies as those in the Oslofjord, due to smoothing of the model topography.
 
 
@@ -19,7 +23,7 @@ The spatial variation is larger in the Saltstraum model. Outside the Saltstraum,
 \begin{figure}[!t]
 \centering
 \includegraphics[width=\textwidth]{fig_Viker_timeseries}
-\caption{Time series of water level at a position close to Viker}
+\caption{Time series of water level at a position close to Viker in the Oslofjord model}
 \label{fig:Viker_timeseries}
 \end{figure}
 
@@ -27,7 +31,7 @@ The spatial variation is larger in the Saltstraum model. Outside the Saltstraum,
 
 \begin{table}[ht]
 %\vspace{-1.5cm}
-\caption{Tidal amplitudes [cm] and phases [deg] for the water level at Viker together with adjustment factor $c$ and phase shift $\triangle \phi$ for each component}
+\caption{Tidal amplitudes [cm] and phases [deg] for the water level at Viker in the Oslofjord model together with adjustment factor $c$ and phase shift $\triangle \phi$ for each component}
 \label{tab:Viker}
 \centering
 \begin{tabular}{crrrrrrrrrr} \hline
@@ -48,7 +52,7 @@ MS$_4$ &   6.1033 &   0.3 & 348 &    1.1 & 111 &    0.6 &  80 &    0.272 &   236
 
 \begin{table}[ht]
 %\vspace{-1.5cm}
-\caption{Tidal amplitudes [cm] and phases [deg] for the water level at Oscarsborg}
+\caption{Tidal amplitudes [cm] and phases [deg] for the water level at Oscarsborg in the Oslofjord model}
 \label{tab:Oscarsborg}
 \centering
 \begin{tabular}{crrrrrrrrrr} \hline
@@ -82,7 +86,7 @@ MS$_4$ &  6.1033 &  0.4 &  32  &   2.2 & 135  &  1.3 & 105.5  \\ \hline
 \begin{figure}[!t]
 \centering
 \includegraphics[width=\textwidth]{fig_Saltstraumen_timeseries}
-\caption{Time series of water level at a position close to Bod{\o}}
+\caption{Time series of water level at a position close to Bod{\o} in the Saltstraum model}
 \label{fig:Saltstraumen_timeseries}
 \end{figure}
 
@@ -97,7 +101,7 @@ MS$_4$ &  6.1033 &  0.4 &  32  &   2.2 & 135  &  1.3 & 105.5  \\ \hline
 
 \begin{table}[ht]
 %\vspace{-1.5cm}
-\caption{Tidal amplitudes [cm] and phases [deg] for the water level at Bod{\o} together with adjustment factor $c$ and phase shift $\triangle \phi$ for each component}
+\caption{Tidal amplitudes [cm] and phases [deg] for the water level at Bod{\o} in the Saltstraum model together with adjustment factor $c$ and phase shift $\triangle \phi$ for each component}
 \label{tab:Bodo}
 \centering
 \begin{tabular}{crrrrrrrrrr} \hline
