@@ -17,10 +17,9 @@ The spatial variation is larger in the Saltstraum model as the choking is more p
 
 In coastal areas the currents vary both in time and over relatively short distances both vertically and horizontally. The currents at a position near Filtvedt in the Oslofjord were measured using a bottom-mounted profiling current meter from 18 September to 25 November 2014. The depth at the observation location was 167 meters. Time series of the observations reveal that the currents vary strongly with depth (Figure~\ref{fig:Filtvedt_timeseries}). The tides are evident except during storm surges where other effects dominate. In the lower levels more water run northwards during low and rising tide than southwards during high and descending tide. The tides in the upper levels are delayed in time compared to the lower levels. The velocities in the upper levels are difficult to determine due to noise. 
 
-In order to compare observed and modelled tidal currents, harmonic analyses are performed on the depth integrated currents. The  probability density functions reveal that the flow pattern has changed remarkable from run 1 to run 2 (Figure\-\ref{fig:Filtvedt_pdf}). In the observations more water flow north than south below 40 meters depth. The currents below 40 meters depth are more evenly distributed in the model. The currents in the upper layers are more sensitive to changes in the tidal forcing. 
+In order to compare observed and modelled tidal currents, harmonic analyses are performed on the depth integrated currents. The  probability density functions reveal that the flow pattern has changed remarkable from run 1 to run 2 (Figure\-\ref{fig:Filtvedt_pdf}). In the observations more water flow north than south below 40 meters depth. The currents below 40 meters depth are more evenly distributed in the model.  
 
-An accurate representation of the currents at one specific position in shallow areas cannot be expected. 
-
+An accurate representation of the currents at one specific position in shallow areas cannot be expected, but the tidal components have improved after the adjustment (Table\-\ref{tab:Filtvedt}). The simply approach to adjust the tidal forcing gives  improved and adequate accurate results for the two areas in question. 
 
 %The Saltstraumen is one of the worlds strongest tidal currents. Due to a narrow passage the tidal amplitude is much smaller inside the narrow passage than outside the passage, resulting in strong currents. 
 %The presence of Saltstraumen as a major impact on the circulation in the Saltfjord. According to \cite{svendsen96} an anticyclonic vortex is formed to the northeast of Saltstraumen, and a cyclonic vortex to the northwest.
@@ -141,4 +140,23 @@ MS$_4$  &  6.1033  &   1.3 &      2   &   1.5 &    152   &   1.4 &     30    &  
 \end{figure}
 
 
+\begin{table}[ht]
+%\vspace{-1.5cm}
+\caption{Tidal major amplitudes [cm/s] and phases [deg] for the current at Filtvedt in the Oslofjord model}
+\label{tab:Filtvedt}
+\centering
+\begin{tabular}{crrrrrrrrrr} \hline
+      & Period & \multicolumn{2}{c}{Observed} & \multicolumn{2}{c}{Run 1} & \multicolumn{2}{c}{Run 2} & \multicolumn{2}{c}{Adjustment} \\
+Comp. & [h] $\;\;$ & [cm/s] & [deg] & [cm/s] & [deg] & [cm] & [deg] \\ \hline 
+S$_2$  & 12.0000 &  0.7 & 273  &   1.2 & 351  &  0.5 & 334  \\
+M$_2$  & 12.4206 &  1.6 &  10  &   2.2 &  33  &  2.0 &  16  \\
+N$_2$  & 12.6584 &  0.4 & 321  &   1.2 & 352  &  0.5 & 343  \\
+K$_1$  & 23.9345 &  0.5 &  89  &   0.1 &  36  &  0.0 & 260  \\
+%P$_1$  & 24.0659 &  -   &  -   &    -  &  -   &   -  &  -   \\
+O$_1$  & 25.8193 &  0.3 & 165  &   0.3 & 251  &  0.2 & 250  \\
+MN$_4$ &  6.2692 &  0.3 & 133  &   0.6 &  84  &  0.2 & 305  \\
+M$_4$  &  6.2103 &  0.8 & 208  &   0.6 & 331  &  0.7 & 291  \\
+MS$_4$ &  6.1033 &  0.2 & 239  &   0.7 &  57  &  0.4 &  19  \\ \hline 
+\end{tabular}
+\end{table}
 
