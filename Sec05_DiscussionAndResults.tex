@@ -1,23 +1,23 @@
 \section{Discussion and results}
 
-Both fjord models are run twice. The first run applies the original tidal forcing, as generated directly from the TPXO atlases, and the second run applies the adjusted tidal forcing. The results improved for both the Oslofjord and for the Saltfjord. 
+Both fjord models are run twice. The first run applies the original tidal forcin and the second run applies the adjusted tidal forcing. The results improved for both the Oslofjord and for the Saltfjord. 
 
-In the first run with the Oslofjord model, the modelled amplitudes did not match the observed amplitudes and the maximums appeared too late in time (Fig.~\ref{fig:Viker_timeseries}). In the second run both phases and amplitudes improved. Table~\ref{tab:Viker} shows that the adjustments had the desired effect close to the open boundary, while Table~\ref{tab:Oscarsborg} shows that the simulated tides are distributed as intended in the inner parts of the fjord. 
+In the first run with the Oslofjord model, the modelled amplitudes did not match the observed amplitudes and the maxima appeared too late in time (Fig.~\ref{fig:Viker_timeseries}). In the second, run both phases and amplitudes improved. Table~\ref{tab:Viker} shows that the adjustments had the desired effect close to the open boundary, while Table~\ref{tab:Oscarsborg} shows that the modelled tides are distributed as intended in the inner parts of the fjord. 
 
-For the Saltfjord, time series reveal that the amplitudes are too small and the maximums appeared too early (Fig.~\ref{fig:Saltstraumen_timeseries}). Table~\ref{tab:Bodo} shows that the amplitudes are still too small in the second run, but closer to the observed values than the first run. The error in phase for M$_2$ was only $0.8$ degrees which corresponds to three minutes (Table~\ref{tab:Bodo}).
+For the Saltfjord, time series reveal that the amplitudes are too small and the maxima appeared too early (Fig.~\ref{fig:Saltstraumen_timeseries}). Table~\ref{tab:Bodo} shows that the amplitudes are still too small in the second run, but closer to the observed values than in the first run. The error in phase for M$_2$ was only $0.8$ degrees which corresponds to three minutes (Table~\ref{tab:Bodo}).
 
 The barotropic tide propagates with a phase speed of $c = \omega/k \approx \sqrt{g h_c}$ where $g$ is the acceleration of gravity and $h_c$ is the characteristic depth. The distance from Viker to Oscarsborg is approximately 75 km and the mean depth is around 200 meters which gives an approximate phase speed of 44 m/s and a phase lag of approximately 28 minutes. According to Table~\ref{tab:Viker} and~\ref{tab:Oscarsborg} the observed phase lag is 17 degrees for M$_2$ which corresponds to 35 minutes which is only slightly longer than the approximate theoretical phase lag. 
 
-Fields of the amplitude and phase for M$_2$ in the Oslofjord reveal some interesting phenomenas (Fig.~\ref{fig:Oslofjord_tidal_fields}). 
+Fields of the amplitude and phase for M$_2$ in the Oslofjord reveal some interesting phenomenons (Fig.~\ref{fig:Oslofjord_tidal_fields}). 
 The M$_2$ amplitude increases gradually northward from the open boundary in the south and all the way to the head of the fjord in the eastern branch. 
-This can be explained by a progressive wave that propagate into the fjord and is reflected at the head.
+This can be explained by a progressive wave that propagates into the fjord and is reflected at the head.
 The sum of two progressive waves gives a wave with increasing amplitude in the northward direction, as observed. 
 %The observed phase lag in the western branch is more pronounced in the observations than in the model. The cause is most probably the smoothing of the topography in the model.
 
-In the western branch of the Oslofjord tidal choking occur as water pass through the very narrow passage at the Svelvikstraum. Tidal chocking implies a decrease of tidal amplitude and a corresponding phase lag \cite[]{stigebrandt80} and occur when the tidal wave enters a semi-enclosed basin through a sufficient narrow inlet. This well-known phenomena is observed in several landlocked fjords or basins, for example Nord{\aa}svatnet in Norway \cite[]{glenne63}, Saltfjord in Norway \cite[]{eliassen01}, Mundau-Manguaba in Brazil \cite[]{oliveira93}, and Negembo Lagoon in Sri Lanka \cite[]{rydberg96}. 
+In the western branch of the Oslofjord tidal choking occurs as water pass through the very narrow passage at the Svelvikstraum. Tidal chocking implies a decrease of tidal amplitude and a corresponding phase lag \cite[]{stigebrandt80} and occurs when the tidal wave enters a semi-enclosed basin through a sufficiently narrow inlet. This well-known phenomena is observed in several landlocked fjords and basins, for example Nord{\aa}svatnet and Saltfjord in Norway \cite[]{glenne63,eliassen01}, Mundau-Manguaba in Brazil \cite[]{oliveira93}, and Negembo Lagoon in Sri Lanka \cite[]{rydberg96}. 
 
 The spatial variation is larger in the Saltfjord model as the choking is more pronounced (Fig.~\ref{fig:Saltstraumen_field}). Outside the Saltstraum, the narrow strait separating the two fjords, the M$_2$ amplitude is quite uniform at approximately $80$ cm, while on the inside it is only about $35$ cm. The corresponding phase delay is approximately $60$ degrees. Unfortunately, there is no available tidal gauges inside of the Saltstraum, but according to The Norwegian Hydrological Survey the M$_2$ amplitude in the Skjerstadfjord is 52.9 cm and the phase delay is 55 degrees compared with the sea level at Bod{\o} \cite[]{tide16}.
-According to these records, the choking effect in the model setup is slightly too strong.
+According to these records, the choking effect is slightly too strong in the model.
 %, so we have no means of validating whether or not these values are correct. But we can speculate that we would se similar inconsistencies as those in the Oslofjord, due to smoothing of the model topography.
 
 In coastal areas the currents vary both in time and over relatively short distances both vertically and horizontally. The currents at a position near Filtvedt in the Oslofjord were measured using a bottom-mounted profiling current meter from 18 September to 25 November 2014. The depth at the observation location was 167 meters. Time series of the observations reveal that the observed currents vary strongly with depth (Fig.~\ref{fig:Filtvedt_timeseries_obs}). The tides are evident except during storm surges where other effects dominate. In the lower levels more water run northwards during low and rising tide than southwards during high and descending tide. The tides in the upper levels are delayed in time compared to the lower levels. The velocities in the upper levels are difficult to determine due to noise. 
@@ -46,12 +46,12 @@ The simple approach to adjust the tidal forcing gives improved and adequate accu
 
 \begin{table}[ht]
 %\vspace{-1.5cm}
-\caption{Tidal amplitudes [cm] and phases [deg] for the water level at Viker in the Oslofjord together with adjustment factor $c$ and phase shift $\triangle \phi$ for each component}
+\caption{Tidal amplitudes [cm] and phases [deg] for the water level at Viker in the Oslofjord together with adjustment factors $c^{(n)}$ and phase shifts $\triangle \phi^{(n)}$ for each component}
 \label{tab:Viker}
 \centering
 \begin{tabular}{crrrrrrrrrr} \hline
        & Period & \multicolumn{2}{c}{Observed} & \multicolumn{2}{c}{Run 1} & \multicolumn{2}{c}{Run 2} & \multicolumn{2}{c}{Adjustment} \\
-Comp.  & [h] $\;\;$ & [cm] & [deg] & [cm] & [deg] & [cm] & [deg] & $c\;\;$ & $\triangle \phi$  \\ \hline 
+Comp.  & [h] $\;\;$ & [cm] & [deg] & [cm] & [deg] & [cm] & [deg] & $c^{(n)}$ & $\triangle \phi^{(n)}$  \\ \hline 
 S$_2$  &  12.0000 &   3.0 &  39 &    5.1 &  81 &    3.2 &  67 &    0.588 &   -42.4   \\
 M$_2$  &  12.4206 &  11.8 & 105 &    9.7 & 122 &   11.8 & 105 &    1.224 &   -16.8   \\
 N$_2$  &  12.6584 &   3.4 &  57 &    5.7 &  81 &    3.1 &  69 &    0.595 &   -24.2   \\
@@ -93,7 +93,7 @@ MS$_4$ &  6.1033 &  0.4 &  32  &   2.2 & 135  &  1.3 & 105.5  \\ \hline
 \includegraphics[trim=1cm 1cm 0cm 0cm,clip=true,width=0.49\textwidth]{fig_Oslofjorden_M2amp.eps}
 \includegraphics[trim=1cm 1cm 0cm 0cm,clip=true,width=0.49\textwidth]{fig_Oslofjorden_M2phase.eps}
 %\includegraphics[width=0.33\textwidth]{fig_Oslofjorden_M2camp.eps}
-\caption{Fields of M$_2$ water level amplitude and phase in the Oslofjord. The corresponding observed values are indicated by coloured circles at the three permanent gauges in the area.}
+\caption{Fields of M$_2$ water level amplitude (left) and phase (right) in the Oslofjord. The corresponding observed values are indicated by coloured circles at the three permanent gauges in the area.}
 \label{fig:Oslofjord_tidal_fields}
 \end{figure}
 
@@ -110,18 +110,18 @@ MS$_4$ &  6.1033 &  0.4 &  32  &   2.2 & 135  &  1.3 & 105.5  \\ \hline
 \centering
 \includegraphics[width=\textwidth]{fig_Saltstraumen_M2amp}
 \includegraphics[width=\textwidth]{fig_Saltstraumen_M2phase}
-\caption{Fields of M$_2$ water level amplitude and phase in the Saltstarum model.}
+\caption{Fields of M$_2$ water level amplitude and phase in the Saltfjord model.}
 \label{fig:Saltstraumen_field}
 \end{figure}
 
 \begin{table}[ht]
 %\vspace{-1.5cm}
-\caption{Tidal amplitudes [cm] and phases [deg] for the water level at Bod{\o} in the Saltfjord together with adjustment factor $c$ and phase shift $\triangle \phi$ for each component}
+\caption{Tidal amplitudes [cm] and phases [deg] for the water level at Bod{\o} in the Saltfjord together with adjustment factors $c^{(n)}$ and phase shifts $\triangle \phi^{(n)}$ for each component}
 \label{tab:Bodo}
 \centering
 \begin{tabular}{crrrrrrrrrr} \hline
       & Period & \multicolumn{2}{c}{Observed} & \multicolumn{2}{c}{Run 1} & \multicolumn{2}{c}{Run 2} & \multicolumn{2}{c}{Adjustment} \\
-Comp. & [h] $\;\;$ & [cm] & [deg] & [cm] & [deg] & [cm] & [deg] & $c\;\;$ & $\triangle \phi$  \\ \hline 
+Comp. & [h] $\;\;$ & [cm] & [deg] & [cm] & [deg] & [cm] & [deg] & $c^{(n)}$ & $\triangle \phi^{(n)}$  \\ \hline 
 S$_2$   & 12.0000  &  30.0 &      8   &  19.1 &     16   &  28.1 &      7    &   1.570  &    -7.2   \\ 
 M$_2$   & 12.4206  &  87.3 &    331   &  60.0 &    301   &  78.3 &    330    &   1.454  &    29.8   \\ 
 N$_2$   & 12.6584  &  18.5 &    308   &  12.7 &    271   &  16.7 &    309    &   1.461  &    37.2   \\ 
@@ -144,7 +144,7 @@ MS$_4$  &  6.1033  &   1.3 &      2   &   1.5 &    152   &   1.4 &     30    &  
 \begin{figure}[!t]
 \centering
 \includegraphics[width=\textwidth]{fig_Filtvedt_timeseries}
-\caption{Time series of depth integrated tidal currents at a position close to Filtvedt in the Oslofjord. The modelled time series are constructed based on the harmonic components}
+\caption{Time series of depth integrated tidal currents at a position close to Filtvedt in the Oslofjord. The modelled time series are constructed based on the harmonic components. Neither observed nor modelled currents at water depths less than 40 meters are included due to noise in the upper levels of the observations.}
 \label{fig:Filtvedt_timeseries}
 \end{figure}
 

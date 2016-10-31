@@ -4,16 +4,16 @@ A simple interpolation from the global or Atlantic tidal solutions to the model 
 
 The criterion for this method to work properly is that the open boundary should be as parallel as possible to the face of the tidal wave, or that the width of the open boundary is small enough for the phase shift along the boundary to be negligible. There must also be water level observations available at, or close to, the open boundary.
 
-The method is straight forward. First the tidal forcing, the Atlantic TPXO with a resolution of 1/30 degree for the Oslofjord model and the global TPXO with a resolution of 1/4 degree for the Saltstraumen model, were imposed at the open boundaries of the fjord models. The simulated time period was 150 days starting 1 April 2014. 
+The method is straight forward. First the tidal forcing, the Atlantic TPXO with a resolution of 1/30 degree for the Oslofjord model and the global TPXO with a resolution of 1/4 degree for the Saltfjord model, were imposed at the open boundaries of the fjord models. The simulated time period was 150 days starting 1 April 2014. 
 
-Time series of observed and simulated water level from locations near the tidal gauge stations close to the open boundaries, were extracted and analysed using the T\_Tide package described by \cite{pawlowicz02}. For the Oslofjord model, observed and modelled water level are extracted from a location near Viker which lies inside the model domain. For the Saltstraumen model, observed and modelled water level are extracted from a location near Bod{\o} which lies slightly outside the model domain. Nine major tide constituents of diurnal (K$_1$, P$_1$, and O$_1$), semi diurnal (S$_2$, M$_2$, and N$_2$), and quarter-diurnal (MN$_4$, M$_4$, and MS$_4$) frequencies are retrieved from the observed and modelled time series. 
+Time series of observed and modelled water level from locations near the tidal gauge stations close to the open boundaries, were extracted and analysed using the T\_Tide package described by \cite{pawlowicz02}. For the Oslofjord model, observed and modelled water level are extracted from a location near Viker which lies inside the model domain. For the Saltfjord model, observed and modelled water level are extracted from a location near Bod{\o} which lies slightly outside the model domain. Nine major tidal constituents of diurnal (K$_1$, P$_1$, and O$_1$), semi diurnal (S$_2$, M$_2$, and N$_2$), and quarter diurnal (MN$_4$, M$_4$, and MS$_4$) frequencies are retrieved from the observed and modelled time series. 
 
-To better match the observations, the tidal amplitudes and corresponding phase were modified by computing an amplitude factor, $c^{(n)}$, and a phase shift, $\triangle \phi^{(n)}$, for each tidal component $n$ for the water level according to:
+To better match the observations, the tidal amplitudes and corresponding phases were modified by computing an amplitude factor, $c^{(n)}$, and a phase shift, $\triangle \phi^{(n)}$, for each tidal component $n$ for the water level according to:
 \begin{eqnarray}
 c^{(n)} &=& \frac{a^{(n)}_{obs}}{a^{(n)}_{sim}} \\
 \triangle \phi^{(n)} &=& \phi^{(n)}_{obs} - \phi^{(n)}_{sim}
 \end{eqnarray}
-$a^{(n)}_{obs}$ and $a^{(n)}_{sim}$ are the observed and simulated amplitudes respectively. $\phi^{(n)}_{obs}$ and $\phi^{(n)}_{sim}$ are the observed and simulated phases respectively. 
+$a^{(n)}_{obs}$ and $a^{(n)}_{sim}$ are the observed and modelled amplitudes respectively. $\phi^{(n)}_{obs}$ and $\phi^{(n)}_{sim}$ are the observed and modelled phases respectively. 
 
 New amplitudes and phases at the boundary were then calculated using the computed factors and phase shifts on both water level and velocity. A linear relationship between change in sea level and velocity is assumed. The new amplitudes and phases imposed at the open boundaries of new simulations where taken as:
 \begin{eqnarray}
@@ -22,4 +22,4 @@ a^{(n)}_{i2} &=& a^{(n)}_{i1} c^{(n)} \\
 \end{eqnarray}
 $a^{(n)}_{i1}$ and $\phi^{(n)}_{i1}$ are the amplitude and phase originally imposed on grid cell $i$ along the boundary. Modified major and minor amplitude and phase for the tidal current are adjusted in the same way using the amplitude factor and phase shift calculated from the water level. The inclination angles are not adjusted.
 
-After the adjusted tidal forcing is generated, both models are rerun using the new tidal forcing. The results are then analysed the same way as for the first run, and compared with observed tidal water level. 
+After the adjusted tidal forcing is generated, both models are rerun using the new tidal forcing. The results are then analysed the same way as for the first run, and compared with observed tidal water level and currents. 

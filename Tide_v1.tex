@@ -81,7 +81,13 @@ grestore
 
 \maketitle
 
-\include{Sec00_Abstract}
+Tides are one of the dominant driving forces in coastal waters. Due to complex topography with narrow and shallow straits, the tides in the innermost parts of a fjord are both shifted in phase and altered in amplitude compared to the tides in the open water outside the fjord.
+
+To model the currents in fjords, and hence also the hydrography, accurate tidal forcing is of extreme importance. Since tides vary over short distances close to the coast line, the global tidal forcing is commonly too coarse to achieve sufficiently accurate tides in fjords. We present a straightforward method to remedy this problem by simply adjusting the tides to fit the observed tides at the entrance of the fjords. First, a high-resolution fjord model is run with the global tidal forcing on its open boundary. Time series of water level is then analysed and compared with observed water level. Based on the comparison a factor for the amplitude and a phase shift is computed and applied to produce adjusted tidal forcing in which the same factor and phase shift is used to adjust both water level and currents. Next the fjord model is rerun using the adjusted tidal forcing on the open boundary. The results are then compared to independent water level observations inside the fjord.  
+
+To evaluate the method we present results using a curvilinear version of the Regional Ocean Model System (ROMS) for two different fjord areas in Norway, namely the Oslofjord and the Saltfjord. The results show improvements in the modelled tides in both the inner and the outer parts of the fjords. 
+
+%\include{Sec00_Abstract}
 \include{Sec01_Indtroduction}
 \include{Sec02_AreaOfInterest}
 \include{Sec03_ModelSetup}
