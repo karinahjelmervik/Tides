@@ -21,8 +21,8 @@ Both fjord models utilize high-resolution, curvilinear horizontal grids, and ter
 
 The two models have slightly different setups with regards to the external forcing that is applied; the Oslofjord model is run with all realistic forcing, whereas the Saltfjord model is a pure tidal model. 
 
-The necessary atmospheric input (wind, pressure, temperature, humidity, and cloud cover) for the Oslofjord model is extracted from the AROME-MetCoOp model with a grid resolution of 2.5 km \cite[]{muller2015}. Freshwater discharges (rivers) are taken from a database constructed by use of the hydrological model HBV \cite[]{beldring2003}. At the open boundary to the south, the model is nested offline into the NorKyst800 model \cite[]{albretsen11} through daily means of temperature, salinity, water level, and currents.
+The necessary atmospheric input (wind, pressure, temperature, humidity, and cloud cover) for the Oslofjord model is extracted from the AROME-MetCoOp model with a grid resolution of 2.5 km \cite[]{muller2015}. Freshwater discharges (rivers) are taken from a database constructed by use of the hydrological model HBV \cite[]{beldring2003}. At the open boundary to the south, the model is nested offline into the NorKyst800 model \cite[]{albretsen11} through daily means of water level and vertical profiles of temperature, salinity, and currents.  
 
 For the Saltfjord model, the values at the open boundary to the west is set to a constant value, based on a one year climatology from the NorKyst800 model. Neither atmospheric forcing nor river inputs were applied.
 
-The tidal forcing in terms of tidal elevations and currents is based on the TPXO 7.2 Atlantic database with a horizontal resolution of 1/30$^o$ \cite[]{egbert02} for the Oslofjord model. The global TPXO 7.2 atlas with  horizontal resolution of 1/4$^o$ was applied for the Saltfjord model. 
+The tidal forcing in terms of tidal elevations and depth averaged currents is based on the TPXO 7.2 Atlantic database with a horizontal resolution of 1/30$^o$ \cite[]{egbert02} for the Oslofjord model. The global TPXO 7.2 atlas with  horizontal resolution of 1/4$^o$ was applied for the Saltfjord model. 
