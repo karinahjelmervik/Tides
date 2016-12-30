@@ -1,10 +1,11 @@
 \section{Discussion and results}
 
-Both fjord models are run twice. The first run applies the original tidal forcing and the second run applies the adjusted tidal forcing. The results improved for both the Oslofjord and for the Saltfjord. 
+Both fjord models are run twice. The first run applies the original tidal forcing and the second run applies the adjusted tidal forcing. Nine major tidal constituents of diurnal (K$_1$, P$_1$, and O$_1$), semi diurnal (S$_2$, M$_2$, and N$_2$), and quarter diurnal (MN$_4$, M$_4$, and MS$_4$) frequencies are evaluated using harmonic analyses on the observed and modelled time series from both runs. The results improved for both the Oslofjord and for the Saltfjord. 
 
-In the first run with the Oslofjord model, the modelled amplitudes did not match the observed amplitudes and the maxima appeared too late in time (Fig.~\ref{fig:Viker_timeseries}). In the second, run both phases and amplitudes improved. Table~\ref{tab:Viker} shows that the adjustments had the desired effect close to the open boundary, while Table~\ref{tab:Oscarsborg} shows that the modelled tides are distributed as intended in the inner parts of the fjord. 
+In the first run with the Oslofjord model, the modelled amplitudes did not match the observed amplitudes and the maxima appeared too late in time (Fig.~\ref{fig:Viker_timeseries}). In the second, run both phases and amplitudes improved. Table~\ref{tab:Viker} shows that the adjustments had the desired effect close to the open boundary. Notice the adjustment factors. The amplitudes of the principal lunar semidiurnal constituent (M$_2$) and its shallow water overtide (M$_4$) are increased, while the remaining are reduced. The size of these factors emphasize the need for adjustment of the tidal forcing. 
+The modelled tides in the inner domain depend not only on the tidal forcing, but also on how the propagation of the tidal waves are represented in the model. Table~\ref{tab:Oscarsborg} shows that the modelled tides have improved also in the inner parts of the fjord. The remaining  discrepancies in the diurnal and quarter diurnal indicate challenges that might be caused by the representation of the propagation.
 
-For the Saltfjord, time series reveal that the amplitudes are too small and the maxima appeared too early (Fig.~\ref{fig:Saltstraumen_timeseries}). Table~\ref{tab:Bodo} shows that the amplitudes are still too small in the second run, but closer to the observed values than in the first run. The error in phase for M$_2$ was only $0.8$ degrees which corresponds to three minutes (Table~\ref{tab:Bodo}).
+For the Saltfjord, time series reveal that the amplitudes are too small and the maxima appeared too early (Fig.~\ref{fig:Saltstraumen_timeseries}). Table~\ref{tab:Bodo} shows that the amplitudes are still too small in the second run, but closer to the observed values than in the first run. The error in phase for M$_2$ was only $0.8$ degrees which corresponds to three minutes (Table~\ref{tab:Bodo}). Again, the size of the adjustment factors emphasize the need for adjustment of the tidal forcing due to poor representation of the constituents in the original forcing. 
 
 The barotropic tide propagates with a phase speed of $c = \omega/k \approx \sqrt{g h_c}$ where $g$ is the acceleration of gravity and $h_c$ is the characteristic depth. The distance from Viker to Oscarsborg is approximately 75 km and the mean depth is around 200 meters which gives an approximate phase speed of 44 m/s and a phase lag of approximately 28 minutes. According to Table~\ref{tab:Viker} and~\ref{tab:Oscarsborg} the observed phase lag is 17 degrees for M$_2$ which corresponds to 35 minutes which is only slightly longer than the approximate theoretical phase lag. 
 
@@ -14,7 +15,6 @@ This can be explained by a progressive wave that propagates into the fjord and i
 The sum of two progressive waves gives a wave with increasing amplitude in the northward direction, as observed. 
 Although the representation of M$_2$ at the boundary is in good agreement with the observations, the representation at the innermost stations deteriorates.
 %The observed phase lag in the western branch is more pronounced in the observations than in the model. The cause is most probably the smoothing of the topography in the model.
-
 In the western branch of the Oslofjord tidal choking occurs as water pass through the very narrow passage at the Svelvikstraum. Tidal chocking implies a decrease of tidal amplitude and a corresponding phase lag \cite[]{stigebrandt80} and occurs when the tidal wave enters a semi-enclosed basin through a sufficiently narrow inlet. This well-known phenomena is observed in several landlocked fjords and basins, for example Nord{\aa}svatnet and Saltfjord in Norway \cite[]{glenne63,eliassen01}, Mundau-Manguaba in Brazil \cite[]{oliveira93}, and Negembo Lagoon in Sri Lanka \cite[]{rydberg96}. 
 
 The spatial variation is larger in the Saltfjord model as the choking is more pronounced (Fig.~\ref{fig:Saltstraumen_field}). Outside the Saltstraum, the narrow strait separating the two fjords, the M$_2$ amplitude is quite uniform at approximately $80$ cm, while on the inside it is only about $35$ cm. The corresponding phase delay is approximately $60$ degrees. Unfortunately, there is no available tidal gauges inside of the Saltstraum, but according to The Norwegian Hydrological Survey the M$_2$ amplitude in the Skjerstadfjord is 52.9 cm and the phase delay is 55 degrees compared with the sea level at Bod{\o} \cite[]{tide16}.
@@ -23,8 +23,8 @@ According to these records, the choking effect is slightly too strong in the mod
 
 In coastal areas the currents vary both in time and over relatively short distances both vertically and horizontally. The currents at a position near Filtvedt in the Oslofjord were measured using a bottom-mounted profiling current meter from 18 September to 25 November 2014. The depth at the observation location was 167 meters. Time series of the observations reveal that the observed currents vary strongly with depth (Fig.~\ref{fig:Filtvedt_timeseries_obs}). The tides are evident except during storm surges where other effects dominate. In the lower levels more water run northwards during low and rising tide than southwards during high and descending tide. The tides in the upper levels are delayed in time compared to the lower levels. The velocities in the upper levels are difficult to determine due to noise. 
 
-In order to compare observed and modelled tidal currents, harmonic analyses are performed on the depth integrated currents. Time series of the modelled tidal currents are constructed based on the calculated tidal components for the time period of the observations (Fig.~\ref{fig:Filtvedt_timeseries}). The time series reveal that the amplitudes in run 1 are too strong compared to the observations. 
-An accurate representation of the currents at one specific position in shallow areas cannot be expected, but the tidal components have improved after the adjustment (Table~\ref{tab:Filtvedt}). 
+In order to compare observed and modelled tidal currents, harmonic analyses are performed on the depth averaged currents using T\_Tide. Time series of the observed and modelled tidal currents are constructed based on the calculated tidal components for the time period of the observations (Fig.~\ref{fig:Filtvedt_timeseries}). The time series reveal that the amplitudes in run 1 are too strong compared to the observations. 
+An accurate representation of the currents at one specific position in shallow areas cannot be expected due to spatiotemporal challenges, but the tidal representation have improved after the adjustment (Table~\ref{tab:Filtvedt}). %Local features such as eddies seem to have a large impact on the phases.
 %The  probability density functions reveal that the flow pattern has changed remarkable from run 1 to run 2 (Fig.~\ref{fig:Filtvedt_pdf}). 
 %The currents below 40 meters depth are more evenly distributed in the model.  
 
@@ -145,7 +145,7 @@ MS$_4$  &  6.1033  &   1.3 &      2   &   1.5 &    152   &   1.4 &     30    &  
 \begin{figure}[!t]
 \centering
 \includegraphics[width=\textwidth]{fig_Filtvedt_timeseries}
-\caption{Time series of depth integrated tidal currents at a position close to Filtvedt in the Oslofjord. The modelled time series are constructed based on the harmonic components. Neither observed nor modelled currents at water depths less than 40 meters are included due to noise in the upper levels of the observations.}
+\caption{Time series of depth averaged tidal currents at a position close to Filtvedt in the Oslofjord. The time series are constructed based on the tidal components. Neither observed nor modelled currents at water depths less than 40 meters are included due to noise in the upper levels of the observations.}
 \label{fig:Filtvedt_timeseries}
 \end{figure}
 
@@ -159,21 +159,22 @@ MS$_4$  &  6.1033  &   1.3 &      2   &   1.5 &    152   &   1.4 &     30    &  
 
 \begin{table}[ht]
 %\vspace{-1.5cm}
-\caption{Tidal major amplitudes [cm/s] and phases [deg] for the current near Filtvedt in the Oslofjord}
+\caption{Tidal major amplitudes [cm/s] and phases [deg] for the current near Filtvedt in the Oslofjord. The Root Mean Square Error (RMSE) for the time series of each component are computed.}
 \label{tab:Filtvedt}
 \centering
-\begin{tabular}{crrrrrrrr} \hline
-      & Period & \multicolumn{2}{c}{Observed} & \multicolumn{2}{c}{Run 1} & \multicolumn{2}{c}{Run 2} \\
-Comp. & [h] $\;\;$ & [cm/s] & [deg] & [cm/s] & [deg] & [cm] & [deg] \\ \hline 
-S$_2$  & 12.0000 &  0.5 & 280  &   1.4 & 336  &  0.5 & 334  \\
-M$_2$  & 12.4206 &  1.8 &   9  &   2.3 &  18  &  2.0 &  16  \\
-N$_2$  & 12.6584 &  0.5 & 293  &   1.3 & 339  &  0.5 & 343  \\
-K$_1$  & 23.9345 &  0.5 &  61  &   0.1 &   5  &  0.0 & 261  \\
+\begin{tabular}{crcrcrcrcc} \hline
+      & Period & \multicolumn{2}{c}{Observed} & \multicolumn{2}{c}{Run 1} & \multicolumn{2}{c}{Run 2} & \multicolumn{2}{c}{RMSE} \\
+Comp. & [h] $\;\;$ & [cm/s] & [deg] & [cm/s] & [deg] & [cm/s] & [deg] & Run 1 & Run 2\\ \hline 
+S$_2$  & 12.0000 &  0.5 & 280  &   1.4 & 336  &  0.5 & 334  & 1.0 & 0.4 \\
+M$_2$  & 12.4206 &  1.8 &   9  &   2.3 &  18  &  2.0 &  16  & 2.5 & 0.4 \\
+N$_2$  & 12.6584 &  0.5 & 293  &   1.3 & 339  &  0.5 & 343  & 0.9 & 0.2 \\
+K$_1$  & 23.9345 &  0.5 &  61  &   0.1 &   5  &  0.0 & 261  & 0.3 & 0.3 \\
 %P$_1$  & 24.0659 &  -   &  -   &    -  &  -   &   -  &  -   \\
-O$_1$  & 25.8193 &  0.1 & 120  &   0.3 & 244  &  0.2 & 250  \\
-MN$_4$ &  6.2692 &  0.3 & 166  &   0.7 &  52  &  0.2 & 305  \\
-M$_4$  &  6.2103 &  0.7 & 220  &   0.6 & 303  &  0.7 & 291  \\
-MS$_4$ &  6.1033 &  0.0 & 252  &   0.8 &  24  &  0.4 &  19  \\ \hline 
+O$_1$  & 25.8193 &  0.1 & 120  &   0.3 & 244  &  0.2 & 250  & 0.2 & 0.1 \\
+MN$_4$ &  6.2692 &  0.3 & 166  &   0.7 &  52  &  0.2 & 305  & 0.4 & 0.3 \\
+M$_4$  &  6.2103 &  0.7 & 220  &   0.6 & 303  &  0.7 & 291  & 0.7 & 0.7 \\
+MS$_4$ &  6.1033 &  0.0 & 252  &   0.8 &  24  &  0.4 &  19  & 0.6 & 0.2 \\
+\hline 
 \end{tabular}
 \end{table}
 

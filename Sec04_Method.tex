@@ -6,7 +6,7 @@ The criterion for this method to work properly is that the open boundary should 
 
 The method is straight forward. First the tidal forcing, the Atlantic TPXO with a resolution of 1/30 degree, was imposed at the open boundaries of the fjord models. The simulated time period was 150 days starting 1 April 2014. 
 
-Time series of observed and modelled water level from locations near the tidal gauge stations close to the open boundaries, were extracted and analysed using the T\_Tide package described by \cite{pawlowicz02}. For the Oslofjord model, observed and modelled water level are extracted from a location near Viker which lies inside the model domain. For the Saltfjord model, observed and modelled water level are extracted from a location near Bod{\o} which lies slightly outside the model domain. Nine major tidal constituents of diurnal (K$_1$, P$_1$, and O$_1$), semi diurnal (S$_2$, M$_2$, and N$_2$), and quarter diurnal (MN$_4$, M$_4$, and MS$_4$) frequencies are retrieved from the observed and modelled time series. 
+Time series of observed and modelled water level from locations near the tidal gauge stations close to the open boundaries, were extracted and analysed using the T\_Tide package described by \cite{pawlowicz02}. For the Oslofjord model, observed and modelled water level are extracted from a location near Viker which lies inside the model domain. For the Saltfjord model, observed and modelled water level are extracted from a location near Bod{\o} which lies slightly outside the model domain. The standard set of 69 components are applied in the analyses using T\_Tide. In the evaluation, only the components included in or derived from the tidal forcing are considered.
 
 To better match the observations, the tidal amplitudes and corresponding phases were modified by computing an amplitude factor, $c^{(n)}$, and a phase shift, $\triangle \phi^{(n)}$, for each tidal component $n$ for the water level according to:
 \begin{eqnarray}
@@ -23,3 +23,9 @@ a^{(n)}_{i2} &=& a^{(n)}_{i1} c^{(n)} \\
 $a^{(n)}_{i1}$ and $\phi^{(n)}_{i1}$ are the amplitude and phase originally imposed on grid cell $i$ along the boundary. Modified major and minor amplitude and phase for the tidal current are adjusted in the same way using the amplitude factor and phase shift calculated from the water level. The inclination angles are not adjusted.
 
 After the adjusted tidal forcing is generated, both models are rerun using the new tidal forcing. The results are then analysed the same way as for the first run, and compared with observed tidal water level and currents. 
+
+The root mean square errors are calculated for both model runs according to:
+\begin{eqnarray}
+RMSE = \sqrt{\frac{1}{N} \sum_{n=1}^N (\eta^{mod}_n - \eta^{obs}_n)^2}
+\end{eqnarray}
+where $N$ is the number of time steps in the observed and modelled water level series at selected positions, $\eta_n$. A similar equation is applied on the depth averaged tidal currents.
