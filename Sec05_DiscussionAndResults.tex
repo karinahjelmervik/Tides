@@ -2,10 +2,13 @@
 
 Both fjord models are run twice. The first run applies the original tidal forcing and the second run applies the adjusted tidal forcing. Nine major tidal constituents of diurnal (K$_1$, P$_1$, and O$_1$), semi diurnal (S$_2$, M$_2$, and N$_2$), and quarter diurnal (MN$_4$, M$_4$, and MS$_4$) frequencies are evaluated using harmonic analyses on the observed and modelled time series from both runs. The results improved for both the Oslofjord and for the Saltfjord. 
 
-In the first run with the Oslofjord model, the modelled amplitudes did not match the observed amplitudes and the maxima appeared too late in time (Fig.~\ref{fig:Viker_timeseries}). In the second, run both phases and amplitudes improved. Table~\ref{tab:Viker} shows that the adjustments had the desired effect close to the open boundary. Notice the adjustment factors. The amplitudes of the principal lunar semidiurnal constituent (M$_2$) and its shallow water overtide (M$_4$) are increased, while the remaining are reduced. The size of these factors emphasize the need for adjustment of the tidal forcing. 
+In the first run with the Oslofjord model, the modelled amplitudes did not match the observed amplitudes and the maxima appeared too late in time (Fig.~\ref{fig:Viker_timeseries}). In the second, both phases and amplitudes improved. 
+%The RMS error of the tides is 5.1 cm in the first run, and 2.9 cm in the second. 
+Table~\ref{tab:Viker} shows that the adjustments had the desired effect close to the open boundary. Notice the adjustment factors. The amplitudes of the principal lunar semidiurnal constituent (M$_2$) and its shallow water overtide (M$_4$) are increased, while the remaining are reduced. The size of these factors emphasize the need for adjustment of the tidal forcing. 
 The modelled tides in the inner domain depend not only on the tidal forcing, but also on how the propagation of the tidal waves are represented in the model. Table~\ref{tab:Oscarsborg} shows that the modelled tides have improved also in the inner parts of the fjord. The remaining  discrepancies in the diurnal and quarter diurnal indicate challenges that might be caused by the representation of the propagation.
 
-For the Saltfjord, time series reveal that the amplitudes are too small and the maxima appeared too early (Fig.~\ref{fig:Saltstraumen_timeseries}). Table~\ref{tab:Bodo} shows that the amplitudes are still too small in the second run, but closer to the observed values than in the first run. The error in phase for M$_2$ was only $0.8$ degrees which corresponds to three minutes (Table~\ref{tab:Bodo}). Again, the size of the adjustment factors emphasize the need for adjustment of the tidal forcing due to poor representation of the constituents in the original forcing. 
+For the Saltfjord, the modelled time series reveal that the amplitudes and phases are in relatively good agreement with the observations (Fig.~\ref{fig:Saltstraumen_timeseries}). The RMS error of the tides in the first run is 13.6 cm, while in the second only 7.5 cm. This proves that there is an overall improvement. Table~\ref{tab:Bodo} shows that the phases improved, while the amplitudes did not. The error in phase for M$_2$ was only $0.8$ degrees which corresponds to three minutes (Table~\ref{tab:Bodo}). In this case, the adjustment factors reveal that the original forcing is a relatively good representation of the constituents. Even though the adjustment had a negative effect on most of the amplitudes, the phases improved and resulted in a lower RMS error. 
+%Note that the length of the time series are only 180 days. Longer time series might improve the results also for the amplitudes.
 
 The barotropic tide propagates with a phase speed of $c = \omega/k \approx \sqrt{g h_c}$ where $g$ is the acceleration of gravity and $h_c$ is the characteristic depth. The distance from Viker to Oscarsborg is approximately 75 km and the mean depth is around 200 meters which gives an approximate phase speed of 44 m/s and a phase lag of approximately 28 minutes. According to Table~\ref{tab:Viker} and~\ref{tab:Oscarsborg} the observed phase lag is 17 degrees for M$_2$ which corresponds to 35 minutes which is only slightly longer than the approximate theoretical phase lag. 
 
@@ -39,7 +42,7 @@ The simple approach to adjust the tidal forcing gives improved and adequate accu
 \begin{figure}[!t]
 \centering
 \includegraphics[width=\textwidth]{fig_Viker_timeseries}
-\caption{Time series of water level at a position close to Viker in the Oslofjord}
+\caption{Time series of tides at a position close to Viker in the Oslofjord}
 \label{fig:Viker_timeseries}
 \end{figure}
 
@@ -47,41 +50,41 @@ The simple approach to adjust the tidal forcing gives improved and adequate accu
 
 \begin{table}[ht]
 %\vspace{-1.5cm}
-\caption{Tidal amplitudes [cm] and phases [deg] for the water level at Viker in the Oslofjord together with adjustment factors $c^{(n)}$ and phase shifts $\triangle \phi^{(n)}$ for each component}
+\caption{Tidal amplitudes [cm] and phases [deg] for the water level at Viker in the Oslofjord together with adjustment factors $c^{(n)}$ and phase shifts $\triangle \phi^{(n)}$ for each component. The differences between modelled and observed values, are in parentheses.}
 \label{tab:Viker}
 \centering
-\begin{tabular}{crrrrrrrrrr} \hline
-       & Period & \multicolumn{2}{c}{Observed} & \multicolumn{2}{c}{Run 1} & \multicolumn{2}{c}{Run 2} & \multicolumn{2}{c}{Adjustment} \\
-Comp.  & [h] $\;\;$ & [cm] & [deg] & [cm] & [deg] & [cm] & [deg] & $c^{(n)}$ & $\triangle \phi^{(n)}$  \\ \hline 
-S$_2$  &  12.0000 &   3.0 &  39 &    5.1 &  81 &    3.2 &  67 &    0.588 &   -42.4   \\
-M$_2$  &  12.4206 &  11.8 & 105 &    9.7 & 122 &   11.8 & 105 &    1.224 &   -16.8   \\
-N$_2$  &  12.6584 &   3.4 &  57 &    5.7 &  81 &    3.1 &  69 &    0.595 &   -24.2   \\
-K$_1$  &  23.9345 &   0.7 & 136 &    1.2 & 212 &    0.1 & 198 &    0.554 &   -75.9   \\
-P$_1$  &  24.0659 &   0.5 &  66 &    1.2 & 212 &    0.1 & 198 &    0.424 &  -145.5   \\
-O$_1$  &  25.8193 &   2.2 & 279 &    3.7 &  19 &    2.9 & 338 &    0.591 &   259.8   \\
-MN$_4$ &   6.2692 &   0.4 & 263 &    1.0 & 141 &    0.3 &   7 &    0.368 &   122.2   \\
-M$_4$  &   6.2103 &   1.2 & 275 &    0.7 &  25 &    1.1 & 354 &    1.742 &   249.2   \\
-MS$_4$ &   6.1033 &   0.3 & 348 &    1.1 & 111 &    0.6 &  80 &    0.272 &   236.7   \\ \hline
+\begin{tabular}{crrr@{ }lr@{ }lr@{ }lr@{ }lrr} \hline
+      & \multicolumn{2}{c}{Observed} & \multicolumn{4}{c}{Run 1} & \multicolumn{4}{c}{Run 2} & \multicolumn{2}{c}{Adjustment} \\
+Comp. & [cm] & [deg] & \multicolumn{2}{c}{[cm]} & \multicolumn{2}{c}{[deg]} & \multicolumn{2}{c}{[cm]} & \multicolumn{2}{c}{[deg]} & $c^{(n)}$ & $\triangle \phi^{(n)}$  \\ \hline 
+S$_2$  &   3.0 &  39 &  5.1 & (2.1)  &  81 & (42)   &  3.2 & (0.2)  &  67 & (28)  &  0.588 &   -42.4   \\
+M$_2$  &  11.8 & 105 &  9.7 & (-2.1) & 122 & (17)   & 11.8 & (0)    & 105 & (0)   &  1.224 &   -16.8   \\
+N$_2$  &   3.4 &  57 &  5.7 & (2.3)  &  81 & (24)   &  3.1 & (-0.3) &  69 & (12)  &  0.595 &   -24.2   \\
+K$_1$  &   0.7 & 136 &  1.2 & (0.5)  & 212 & (76)   &  0.1 & (-0.6) & 198 & (62)  &  0.554 &   -75.9   \\
+P$_1$  &   0.5 &  66 &  1.2 & (0.7)  & 212 & (146)  &  0.1 & (-0.4) & 198 & (132) &  0.424 &  -145.5   \\
+O$_1$  &   2.2 & 279 &  3.7 & (1.6)  &  19 & (100)  &  2.9 & (0.7)  & 338 & (59)  &  0.591 &   259.8   \\
+MN$_4$ &   0.4 & 263 &  1.0 & (0.6)  & 141 & (-122) &  0.3 & (-0.1) &   7 & (104) &  0.368 &   122.2   \\
+M$_4$  &   1.2 & 275 &  0.7 & (-0.5) &  25 & (110)  &  1.1 & (0.1)  & 354 & (79)  &  1.742 &   249.2   \\
+MS$_4$ &   0.3 & 348 &  1.1 & (0.8)  & 111 & (123)  &  0.6 & (0.3)  &  80 & (92)  &  0.272 &   236.7   \\ \hline
 \end{tabular}
 \end{table}
 
 \begin{table}[ht]
 %\vspace{-1.5cm}
-\caption{Tidal amplitudes [cm] and phases [deg] for the water level at Oscarsborg in the Oslofjord}
+\caption{Tidal amplitudes [cm] and phases [deg] for the water level at Oscarsborg in the Oslofjord. The differences between modelled and observed values, are in parentheses.}
 \label{tab:Oscarsborg}
 \centering
-\begin{tabular}{crrrrrrrrrr} \hline
-      & Period & \multicolumn{2}{c}{Observed} & \multicolumn{2}{c}{Run 1} & \multicolumn{2}{c}{Run 2}  \\
-Comp. & [h] $\;\;$ & [cm] & [deg] & [cm] & [deg] & [cm] & [deg]  \\ \hline 
-S$_2$  & 12.0000 &  3.6 &  59  &   6.1 &  85  &  3.7 &  69.8  \\
-M$_2$  & 12.4206 & 13.7 & 121  &  11.1 & 128  & 13.7 & 111.0  \\
-N$_2$  & 12.6584 &  3.9 &  74  &   6.6 &  86  &  3.6 &  75.1  \\
-K$_1$  & 23.9345 &  0.9 & 138  &   1.1 & 213  &  0.1 &  44.1  \\
-P$_1$  & 24.0659 &  0.7 &  75  &   1.1 & 213  &  0.1 &  44.1  \\
-O$_1$  & 25.8193 &  2.4 & 281  &   3.9 &  21  &  3.1 & 340.2  \\
-MN$_4$ &  6.2692 &  0.6 & 308  &   2.0 & 163  &  0.5 &  29.1  \\
-M$_4$  &  6.2103 &  1.7 & 319  &   1.4 &  44  &  2.0 &  14.5  \\
-MS$_4$ &  6.1033 &  0.4 &  32  &   2.2 & 135  &  1.3 & 105.5  \\ \hline 
+\begin{tabular}{crrr@{ }lr@{ }lr@{ }lr@{ }l} \hline
+      & \multicolumn{2}{c}{Observed} & \multicolumn{4}{c}{Run 1} & \multicolumn{4}{c}{Run 2}  \\
+Comp. &  [cm] & [deg] & \multicolumn{2}{c}{[cm]} & \multicolumn{2}{c}{[deg]} & \multicolumn{2}{c}{[cm]} & \multicolumn{2}{c}{[deg]} \\ \hline 
+S$_2$  &   3.6 &  59  &   6.1 & (2.5)  &  85 & (26)   &  3.7 & (0.1)  &  70 & (11)  \\
+M$_2$  &  13.7 & 121  &  11.1 & (-2.6) & 128 & (7)    & 13.7 & (0)    & 111 & (-10) \\
+N$_2$  &   3.9 &  74  &   6.6 & (2.7)  &  86 & (12)   &  3.6 & (-0.3) &  75 & (1)   \\
+K$_1$  &   0.9 & 138  &   1.1 & (0.2)  & 213 & (75)   &  0.1 & (-0.8) &  44 & (-94) \\
+P$_1$  &   0.7 &  75  &   1.1 & (0.4)  & 213 & (138)  &  0.1 & (-0.6) &  44 & (-31) \\
+O$_1$  &   2.4 & 281  &   3.9 & (1.5)  &  21 & (80)   &  3.1 & (0.7)  & 340 & (59)  \\
+MN$_4$ &   0.6 & 308  &   2.0 & (1.4)  & 163 & (-145) &  0.5 & (-0.1) &  29 & (99)  \\
+M$_4$  &   1.7 & 319  &   1.4 & (-0.3) &  44 & (95)   &  2.0 & (0.3)  &  15 & (56)  \\
+MS$_4$ &   0.4 &  32  &   2.2 & (1.8)  & 135 & (103)  &  1.3 & (0.9)  & 106 & (74)  \\ \hline 
 \end{tabular}
 \end{table}
 
@@ -98,8 +101,9 @@ MS$_4$ &  6.1033 &  0.4 &  32  &   2.2 & 135  &  1.3 & 105.5  \\ \hline
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=\textwidth]{fig_Saltstraumen_timeseries}
-\caption{Time series of water level at a position close to Bod{\o} in the Saltfjord}
+%\includegraphics[width=\textwidth]{fig_Saltstraumen_timeseries}
+\includegraphics[width=\textwidth]{fig_Saltstraumen_timeseries_v2}
+\caption{Time series of tides at a position close to Bod{\o} in the Saltfjord}
 \label{fig:Saltstraumen_timeseries}
 \end{figure}
 
@@ -114,20 +118,20 @@ MS$_4$ &  6.1033 &  0.4 &  32  &   2.2 & 135  &  1.3 & 105.5  \\ \hline
 
 \begin{table}[ht]
 %\vspace{-1.5cm}
-\caption{Tidal amplitudes [cm] and phases [deg] for the water level at Bod{\o} in the Saltfjord together with adjustment factors $c^{(n)}$ and phase shifts $\triangle \phi^{(n)}$ for each component}
+\caption{Tidal amplitudes [cm] and phases [deg] for the water level at Bod{\o} in the Saltfjord together with adjustment factors $c^{(n)}$ and phase shifts $\triangle \phi^{(n)}$ for each component. The differences between modelled and observed values are in parentheses.}
 \label{tab:Bodo}
 \centering
-\begin{tabular}{crrrrrrrrrr} \hline
-      & Period & \multicolumn{2}{c}{Observed} & \multicolumn{2}{c}{Run 1} & \multicolumn{2}{c}{Run 2} & \multicolumn{2}{c}{Adjustment} \\
-Comp. & [h] $\;\;$ & [cm] & [deg] & [cm] & [deg] & [cm] & [deg] & $c^{(n)}$ & $\triangle \phi^{(n)}$  \\ \hline 
-S$_2$   & 12.0000  &  30.0 &      8   &  19.1 &     16   &  28.1 &      7    &   1.570  &    -7.2   \\ 
-M$_2$   & 12.4206  &  87.3 &    331   &  60.0 &    301   &  78.3 &    330    &   1.454  &    29.8   \\ 
-N$_2$   & 12.6584  &  18.5 &    308   &  12.7 &    271   &  16.7 &    309    &   1.461  &    37.2   \\ 
-K$_1$   & 23.9345  &  10.8 &    194   &   8.8 &    183   &  10.7 &    194    &   1.225  &    11.5   \\ 
-O$_1$   & 25.8193  &   3.8 &     33   &   3.3 &     39   &   3.7 &     33    &   1.154  &    -6.1   \\ 
-MN$_4$  &  6.2692  &   1.5 &    229   &   0.4 &    122   &   1.5 &    228    &   3.000  &   106.9   \\ 
-M$_4$   &  6.2103  &   2.7 &    268   &   3.3 &    159   &   3.1 &    283    &   0.808  &   109.5   \\ 
-MS$_4$  &  6.1033  &   1.3 &      2   &   1.5 &    152   &   1.4 &     30    &   0.861  &  -149.6   \\ \hline
+\begin{tabular}{crrr@{ }lr@{ }lr@{ }lr@{ }lrr} \hline
+      & \multicolumn{2}{c}{Observed} & \multicolumn{4}{c}{Run 1} & \multicolumn{4}{c}{Run 2} & \multicolumn{2}{c}{Adjustment} \\
+Comp. & [cm] & [deg] & \multicolumn{2}{c}{[cm]} & \multicolumn{2}{c}{[deg]} & \multicolumn{2}{c}{[cm]} & \multicolumn{2}{c}{[deg]} & $c^{(n)}$ & $\triangle \phi^{(n)}$  \\ \hline 
+S$_2$   &  30.0 &      8   &  29.9 & (-0.1) &    2 & (-6)   &  28.1 & (-1.9) &    7 & (-1)  &   1.003  &     6.8   \\ 
+M$_2$   &  87.3 &    331   &  86.5 & (-0.8) &  319 & (-12)  &  78.3 & (-9.0) &  330 & (-1)  &   1.009  &    11.3   \\ 
+N$_2$   &  18.5 &    308   &  16.2 & (-2.3) &  296 & (-12)  &  16.7 & (-1.8) &  309 & (1)   &   1.138  &    12.1   \\ 
+K$_1$   &  10.8 &    194   &  10.7 & (-0.1) &  192 & (-4)   &  10.7 & (-0.1) &  194 & (0)   &   1.009  &     2.0   \\ 
+O$_1$   &   3.8 &     33   &   2.9 & (-0.9) &   30 & (-3)   &   3.7 & (-0.1) &   33 & (0)   &   1.316  &     3.0   \\ 
+MN$_4$  &   1.5 &    229   &   1.9 & (0.4)  &  229 & (0)    &   1.5 & (0)    &  228 & (-1)  &   0.777  &    -0.3   \\ 
+M$_4$   &   2.7 &    268   &   2.8 & (0.1)  &  287 & (19)   &   3.1 & (0.4)  &  283 & (15)  &   0.954  &   -19.4   \\ 
+MS$_4$  &   1.3 &      2   &   1.6 & (0.3)  &   35 & (33)   &   1.4 & (0.1)  &   30 & (28)  &   0.805  &   -32.8   \\ \hline
 \end{tabular}
 \end{table}
 
@@ -173,21 +177,20 @@ O$_1$  & 25.8193 &  2.6 &  86  &    &   &   &   \\ \hline
 
 \begin{table}[ht]
 %\vspace{-1.5cm}
-\caption{Tidal major amplitudes [cm/s] and phases [deg] for the current near Filtvedt in the Oslofjord. The Root Mean Square Error (RMSE) for the time series of each component are computed.}
+\caption{Tidal major amplitudes [cm/s] and phases [deg] for the current near Filtvedt in the Oslofjord.}
 \label{tab:Filtvedt}
 \centering
-\begin{tabular}{crcrcrcrcc} \hline
-      & Period & \multicolumn{2}{c}{Observed} & \multicolumn{2}{c}{Run 1} & \multicolumn{2}{c}{Run 2} & \multicolumn{2}{c}{RMSE} \\
-Comp. & [h] $\;\;$ & [cm/s] & [deg] & [cm/s] & [deg] & [cm/s] & [deg] & Run 1 & Run 2\\ \hline 
-S$_2$  & 12.0000 &  0.5 & 280  &   1.4 & 336  &  0.5 & 334  & 1.0 & 0.4 \\
-M$_2$  & 12.4206 &  1.8 &   9  &   2.3 &  18  &  2.0 &  16  & 2.5 & 0.4 \\
-N$_2$  & 12.6584 &  0.5 & 293  &   1.3 & 339  &  0.5 & 343  & 0.9 & 0.2 \\
-K$_1$  & 23.9345 &  0.5 &  61  &   0.1 &   5  &  0.0 & 261  & 0.3 & 0.3 \\
-%P$_1$  & 24.0659 &  -   &  -   &    -  &  -   &   -  &  -   \\
-O$_1$  & 25.8193 &  0.1 & 120  &   0.3 & 244  &  0.2 & 250  & 0.2 & 0.1 \\
-MN$_4$ &  6.2692 &  0.3 & 166  &   0.7 &  52  &  0.2 & 305  & 0.4 & 0.3 \\
-M$_4$  &  6.2103 &  0.7 & 220  &   0.6 & 303  &  0.7 & 291  & 0.7 & 0.7 \\
-MS$_4$ &  6.1033 &  0.0 & 252  &   0.8 &  24  &  0.4 &  19  & 0.6 & 0.2 \\
+\begin{tabular}{crrr@{ }lr@{ }lr@{ }lr@{ }l} \hline
+      & \multicolumn{2}{c}{Observed} & \multicolumn{4}{c}{Run 1} & \multicolumn{4}{c}{Run 2} \\%& \multicolumn{2}{c}{RMSE} \\
+Comp. & [cm/s] & [deg] & \multicolumn{2}{c}{[cm/s]} & \multicolumn{2}{c}{[deg]} & \multicolumn{2}{c}{[cm/s]} & \multicolumn{2}{c}{[deg]} \\% & Run 1 & Run 2\\ \hline 
+S$_2$   &  0.5 & 280  &   1.4 & (0.9)  & 336 & (56)   &  0.5 & (0)    & 334 & (54)   \\ % & 1.0 & 0.4 \\
+M$_2$   &  1.8 &   9  &   2.3 & (0.5)  &  18 & (9)    &  2.0 & (0.2)  &  16 & (7)    \\ % & 2.5 & 0.4 \\
+N$_2$   &  0.5 & 293  &   1.3 & (0.8)  & 339 & (46)   &  0.5 & (0)    & 343 & (50)   \\ % & 0.9 & 0.2 \\
+K$_1$   &  0.5 &  61  &   0.1 & (-0.4) &   5 & (-56)  &  0.0 & (-0.5) & 261 & (-160) \\ % & 0.3 & 0.3 \\
+O$_1$   &  0.1 & 120  &   0.3 & (0.2)  & 244 & (124)  &  0.2 & (0.1)  & 250 & (130)  \\ % & 0.2 & 0.1 \\
+MN$_4$  &  0.3 & 166  &   0.7 & (0.4)  &  52 & (-114) &  0.2 & (-0.1) & 305 & (139)  \\ % & 0.4 & 0.3 \\
+M$_4$   &  0.7 & 220  &   0.6 & (-0.1) & 303 & (93)   &  0.7 & (0)    & 291 & (71)   \\ % & 0.7 & 0.7 \\
+MS$_4$  &  0.0 & 252  &   0.8 & (0.8)  &  24 & (132)  &  0.4 & (0.4)  &  19 & (127)  \\ % & 0.6 & 0.2 \\
 \hline 
 \end{tabular}
 \end{table}
