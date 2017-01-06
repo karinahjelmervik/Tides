@@ -6,7 +6,9 @@ The criterion for this method to work properly is that the open boundary should 
 
 The method is straight forward. First the tidal forcing, the Atlantic TPXO with a resolution of 1/30 degree, was imposed at the open boundaries of the fjord models. The simulated time period was 150 days starting 1 April 2014. 
 
-Time series of observed and modelled water level from locations near the tidal gauge stations close to the open boundaries, were extracted and analysed using the T\_Tide package described by \cite{pawlowicz02}. For the Oslofjord model, observed and modelled water level are extracted from a location near Viker which lies inside the model domain. For the Saltfjord model, observed and modelled water level are extracted from a location near Bod{\o} which lies slightly outside the model domain. The standard set of 69 components are applied in the analyses using T\_Tide. In the evaluation, only the components included in or derived from the tidal forcing are considered.
+Time series of observed and modelled water level from locations near the tidal gauge stations close to the open boundaries, were extracted and analysed using the T\_Tide package described by \cite{pawlowicz02}. For the Oslofjord model, observed and modelled water level are extracted from a location near Viker which lies inside the model domain. For the Saltfjord model, observed and modelled water level are extracted from a location near Bod{\o} which lies slightly outside the model domain. The standard set of 69 components are applied in the analyses using T\_Tide. In the evaluation, only the components included in or derived from the tidal forcing are considered. 
+
+The open boundary of both fjord models are relatively narrow, less than 50 km for the Oslofjord and approximately 5 km for the Saltfjord. For the Oslofjord model, two stations are available close to the open boundary (Helgeroa and Viker). The harmonic components from these two stations differ with less than 0.5 cm for the amplitudes and 1 degree for the phases \cite[]{tide16}. Therefore, one station was deemed sufficient in this study. For wider openings it might be necessary to apply more stations. 
 
 To better match the observations, the tidal amplitudes and corresponding phases were modified by computing an amplitude factor, $c^{(n)}$, and a phase shift, $\triangle \phi^{(n)}$, for each tidal component $n$ for the water level according to:
 \begin{eqnarray}
@@ -24,8 +26,8 @@ $a^{(n)}_{i1}$ and $\phi^{(n)}_{i1}$ are the amplitude and phase originally impo
 
 After the adjusted tidal forcing is generated, both models are rerun using the new tidal forcing. The results are then analysed the same way as for the first run, and compared with observed tidal water level and currents. 
 
-The root mean square errors are calculated for both model runs according to:
-\begin{eqnarray}
-RMSE = \sqrt{\frac{1}{N} \sum_{n=1}^N (\eta^{mod}_n - \eta^{obs}_n)^2}
-\end{eqnarray}
-where $N$ is the number of time steps in the observed and modelled water level series at selected positions, $\eta_n$. A similar equation is applied on the depth averaged tidal currents.
+%The root mean square errors are calculated for both model runs according to:
+%\begin{eqnarray}
+%RMSE = \sqrt{\frac{1}{N} \sum_{n=1}^N (\eta^{mod}_n - \eta^{obs}_n)^2}
+%\end{eqnarray}
+%where $N$ is the number of time steps in the observed and modelled water level series at selected positions, $\eta_n$. A similar equation is applied on the depth averaged tidal currents.
