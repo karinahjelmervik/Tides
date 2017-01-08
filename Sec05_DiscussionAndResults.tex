@@ -1,11 +1,13 @@
 \section{Discussion and results}
 
-Both fjord models are run twice. The first run applies the original tidal forcing and the second run applies the adjusted tidal forcing. Nine major tidal constituents of diurnal (K$_1$, P$_1$, and O$_1$), semi diurnal (S$_2$, M$_2$, and N$_2$), and quarter diurnal (MN$_4$, M$_4$, and MS$_4$) frequencies are evaluated using harmonic analyses on the observed and modelled time series from both runs. The results improved for both the Oslofjord and for the Saltfjord. 
+Both fjord models are run twice. The first run applies the original tidal forcing and the second run applies the adjusted tidal forcing. The corresponding tides and eight major tidal constituents of diurnal (K$_1$ and O$_1$), semi diurnal (S$_2$, M$_2$, and N$_2$), and quarter diurnal (MN$_4$, M$_4$, and MS$_4$) frequencies are evaluated using harmonic analyses on the observed and modelled time series from both runs. The modelled tides improved for both the Oslofjord and for the Saltfjord. 
 
 In the first run with the Oslofjord model, the modelled amplitudes did not match the observed amplitudes and the maxima appeared too late in time (Fig.~\ref{fig:Viker_timeseries}). In the second, both phases and amplitudes improved. 
 The RMS error of the tides is 5.1 cm in the first run, and 2.9 cm in the second. 
-Table~\ref{tab:Viker} shows that the adjustments had the desired effect close to the open boundary. Notice the adjustment factors. The amplitudes of the principal lunar semidiurnal constituent (M$_2$) and its shallow water overtide (M$_4$) are increased, while the remaining are reduced. The size of these factors emphasize the need for adjustment of the tidal forcing. 
-The modelled tides in the inner domain depend not only on the tidal forcing, but also on how the propagation of the tidal waves are represented in the model. Table~\ref{tab:Oscarsborg} shows that the modelled tides have improved also in the inner parts of the fjord. The remaining  discrepancies in the diurnal and quarter diurnal indicate challenges that might be caused by the representation of the propagation.
+Table~\ref{tab:Viker} shows that the adjustments had the desired effect close to the open boundary. The amplitudes of the principal lunar semidiurnal constituent (M$_2$) and its shallow water overtide (M$_4$) are increased, while the remaining are reduced. The size of the adjustment factors emphasize the need for adjustment of the tidal forcing. 
+The modelled tides in the inner domain depend not only on the tidal forcing, but also on how the propagation of the tidal waves are represented in the model. Table~\ref{tab:Oscarsborg} shows that the modelled tides have improved also in the inner parts of the fjord. The remaining  discrepancies in the diurnal and quarter diurnal indicate challenges that might be caused by the representation of the propagation. 
+The observed tides in both Viker and Oscarsborg ave a double peaked distribution while the distribution of the tides in run 1 only has one peak (Fig.~\ref{fig:Oslo_PDF}). After the adjustment, a double peaked distribution was achieved.
+There is a stronger correlation between the tides in run 2 and the observations, than in run 1 and the observations for Viker (Fig.~\ref{fig:Oslo_QQ_Scatter}). 
 
 For the Saltfjord, the modelled time series reveal that the amplitudes and phases are in relatively good agreement with the observations (Fig.~\ref{fig:Saltstraumen_timeseries}). The RMS error of the tides in the first run is 13.6 cm, while in the second only 7.5 cm. This proves that there is an overall improvement. Table~\ref{tab:Bodo} shows that the phases improved, while the amplitudes did not. The error in phase for M$_2$ was only $0.8$ degrees which corresponds to three minutes (Table~\ref{tab:Bodo}). In this case, the adjustment factors reveal that the original forcing is a relatively good representation of the constituents. Even though the adjustment had a negative effect on most of the amplitudes, the phases improved and resulted in a lower RMS error. 
 %Note that the length of the time series are only 180 days. Longer time series might improve the results also for the amplitudes.
@@ -86,6 +88,22 @@ MS$_4$ &   0.4 &  32  &   2.2 & (1.8)  & 135 & (103)  &  1.3 & (0.9)  & 106 & (7
 \end{tabular}
 \end{table}
 
+\begin{figure}[!t]
+\centering
+\includegraphics[width=0.49\textwidth]{fig_Viker_QQ_Scatter}
+\includegraphics[width=0.49\textwidth]{fig_Oscarsborg_QQ_Scatter}
+\caption{Combined QQ (solid) and scatter (dots) for Viker (left) and Oscarsborg (right) in the Oslofjord model}
+\label{fig:Oslo_QQ_Scatter}
+\end{figure}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\textwidth]{fig_Viker_PDF}
+\includegraphics[width=\textwidth]{fig_Oscarsborg_PDF}
+\caption{Probability density functions (PDF) for Viker (upper) and Oscarsborg (lower) in the Oslofjord model. A bandwidth of 0.5 cm are applied on the tidal time series. Since a ten minutes interval applies to the tides in the observations, the modelled tides are interpolated to time series with ten minutes intervals.}
+\label{fig:Oslo_PDF}
+\end{figure}
+
 
 \begin{figure}[!t]
 \centering
@@ -139,14 +157,14 @@ MS$_4$  &   1.3 &      2   &   1.6 & (0.3)  &   35 & (33)   &   1.4 & (0.1)  &  
 \caption{Tidal amplitudes [cm] and phases [deg] for the water level at Finneid in the Skjerstadfjord. The observed amplitudes and phases are retrieved from The Norwegian Hydrological Survey \cite[]{tide16}.}
 \label{tab:Finneid}
 \centering
-\begin{tabular}{crrrrrrrrrr} \hline
-      & Period & \multicolumn{2}{c}{Observed} & \multicolumn{2}{c}{Run 1} & \multicolumn{2}{c}{Run 2}  \\
-Comp. & [h] $\;\;$ & [cm] & [deg] & [cm] & [deg] & [cm] & [deg]  \\ \hline 
-S$_2$  & 12.0000 & 15.4 &  75  &    &   &   &   \\
-M$_2$  & 12.4206 & 52.9 &  25  &    &   &   &   \\
-N$_2$  & 12.6584 & 10.4 &   5  &    &   &   &   \\
-K$_1$  & 23.9345 &  8.0 & 235  &    &   &   &   \\
-O$_1$  & 25.8193 &  2.6 &  86  &    &   &   &   \\ \hline 
+\begin{tabular}{crrr@{ }lr@{ }lr@{ }lr@{ }l} \hline
+      & \multicolumn{2}{c}{Observed} & \multicolumn{4}{c}{Run 1} & \multicolumn{4}{c}{Run 2}  \\
+Comp. & [cm] & [deg] & \multicolumn{2}{c}{[cm]} & \multicolumn{2}{c}{[deg]} & \multicolumn{2}{c}{[cm]} & \multicolumn{2}{c}{[deg]}  \\ \hline 
+S$_2$  & 15.4 &  75  &  8.6  & 	(-6.8) &  82  & (7)  &  8.5 & (-6.9)  &  83 & (8)  \\
+M$_2$  & 52.9 &  25  & 33.8  & (-19.1) &  28  & (3)  & 32.0 & (-20.9) &  38 & (13) \\
+N$_2$  & 10.4 &   5  &  5.4  &  (-5.0) &  13  & (8)  &  5.7 & (-4.7)  &  23 & (18) \\
+K$_1$  &  8.0 & 235  &  5.1  &  (-2.9) & 257  & (22) &  5.0 & (-3.0)  & 253 & (-4) \\
+O$_1$  &  2.6 &  86  &  1.2  &  (-1.4) &  90  & (4)  &  1.7 & (-0.9)  &  93 & (7)  \\ \hline 
 \end{tabular}
 \end{table}
 
@@ -180,7 +198,7 @@ O$_1$  & 25.8193 &  2.6 &  86  &    &   &   &   \\ \hline
 \centering
 \begin{tabular}{crrr@{ }lr@{ }lr@{ }lr@{ }l} \hline
       & \multicolumn{2}{c}{Observed} & \multicolumn{4}{c}{Run 1} & \multicolumn{4}{c}{Run 2} \\%& \multicolumn{2}{c}{RMSE} \\
-Comp. & [cm/s] & [deg] & \multicolumn{2}{c}{[cm/s]} & \multicolumn{2}{c}{[deg]} & \multicolumn{2}{c}{[cm/s]} & \multicolumn{2}{c}{[deg]} \\% & Run 1 & Run 2\\ \hline 
+Comp. & [cm/s] & [deg] & \multicolumn{2}{c}{[cm/s]} & \multicolumn{2}{c}{[deg]} & \multicolumn{2}{c}{[cm/s]} & \multicolumn{2}{c}{[deg]} \\ \hline % & Run 1 & Run 2\\ \hline 
 S$_2$   &  0.5 & 280  &   1.4 & (0.9)  & 336 & (56)   &  0.5 & (0)    & 334 & (54)   \\ % & 1.0 & 0.4 \\
 M$_2$   &  1.8 &   9  &   2.3 & (0.5)  &  18 & (9)    &  2.0 & (0.2)  &  16 & (7)    \\ % & 2.5 & 0.4 \\
 N$_2$   &  0.5 & 293  &   1.3 & (0.8)  & 339 & (46)   &  0.5 & (0)    & 343 & (50)   \\ % & 0.9 & 0.2 \\
