@@ -1,4 +1,5 @@
 \section{Model setup}
+\label{sec:model_setup}
 
 The Regional Ocean Model System (ROMS) version 3.6 is applied as described in \cite{roed16} for the Oslofjord. ROMS is a free-surface, terrain-following, primitive equations ocean model widely used by the scientific community for a diverse range of applications \cite[]{shchepetkin05,shchepetkin09,haidvogel08}. 
 The Oslofjord model utilize high-resolution, curvilinear horizontal grids, and terrain-following sigma layers in the vertical using a continuous, double stretching function following \cite{shchepetkin09}. The model have 42 vertical layers. The minimum depth is set to two meters, and for stability reasons some shallow parts of the fjord are omitted. In order to avoid model instability and/or spurious deep currents, the final masked bathymetry is smoothed as described in \cite{roed16}.
