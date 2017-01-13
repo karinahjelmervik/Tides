@@ -2,27 +2,8 @@
 \label{sec:model_setup}
 
 The Regional Ocean Model System (ROMS) version 3.6 is applied as described in \cite{roed16} for the Oslofjord. ROMS is a free-surface, terrain-following, primitive equations ocean model widely used by the scientific community for a diverse range of applications \cite[]{shchepetkin05,shchepetkin09,haidvogel08}. 
-The Oslofjord model utilize high-resolution, curvilinear horizontal grids, and terrain-following sigma layers in the vertical using a continuous, double stretching function following \cite{shchepetkin09}. The model have 42 vertical layers. The minimum depth is set to two meters, and for stability reasons some shallow parts of the fjord are omitted. In order to avoid model instability and/or spurious deep currents, the final masked bathymetry is smoothed as described in \cite{roed16}.
+The Oslofjord model utilize high-resolution, curvilinear horizontal grids, and terrain-following sigma layers in the vertical using a continuous, double stretching function following \cite{shchepetkin09}. The grid size of the Oslofjord model varies from 350 meters at the southern boundary to less than 80 meters in the innermost parts of the fjord. The model have 42 vertical layers. The minimum depth is set to two meters, and for stability reasons some shallow parts of the fjord are omitted. A correct representation of the topography and irregular coastline of the fjord is critical for the propagation of the tidal wave from the boundary into the fjord. In order to avoid model instability and/or spurious deep currents, the final masked bathymetry is smoothed as described in \cite{roed16}. Thus the representation of these feature are never a true representation of the topography and irregular coastline, and hence may influence the propagation of the tidal wave as it progresses into the fjord
 
-%In the horizontal a curvilinear grid with varying grid size is applied (Fig.~\ref{fig:GridSize}). The characteristic grid size, $\Delta s_{i,j}$, is taken as:
-%\begin{eqnarray}
-%\Delta s_{i,j}^2 \! = \! 
-%\left(\!(x_{i+1,j}-x_{i,j})^2\!\! + \!(y_{i+1,j}-y{i,j})^2\! \right)^{\!0.5}\!\!
-%\left(\!(x_{i,j+1}-x_{i,j})^2\!\! + \!(y_{i,j+1}-y_{i,j})^2\! \right)^{\!0.5}
-%\end{eqnarray}
-%Here $i = 1, \cdots, 299$ and $j =1, \cdots, 899$. $x_{i,j}$ and $y_{i,j}$ are the rho-coordinates of element $(i,j)$. (Sp\o rsm\aa l: Er det hensiktsmessig \aa ta med dette?)
-
-%\begin{figure}[!t]
-%\centering
-%%\includegraphics[width=0.4\textwidth]{Figurer/GridSize}
-%\caption{Characteristic grid size in the whole model area.}
-%\label{fig:GridSize}
-%\end{figure}
-
-%The two models have slightly different setups with regards to the external forcing that is applied; 
-%The Oslofjord model is run with all realistic forcing. 
 The necessary atmospheric input (wind, pressure, rain, temperature, humidity, and cloud cover) for the ocean model is extracted from the AROME-MetCoOp model which has a grid resolution of 2.5 km \cite[]{muller2015}. Freshwater discharges (rivers) are taken from a database constructed by use of the hydrological model HBV \cite[]{beldring2003}. At the open boundary to the south, the model is nested offline into the NorKyst800 model \cite[]{albretsen11} through daily means of water level and vertical profiles of temperature, salinity, and currents.  
 The tidal forcing in terms of tidal elevations and depth averaged currents is based on the TPXO 7.2 Atlantic database which has a horizontal resolution of 1/30$^o$ \cite[]{egbert02}.
-
-%For the Saltfjord model, the vertical profiles of temperature and salinity at the open boundary to the west is held constant, based on a one year climatology from the NorKyst800 model. The average water level, and barotropic currents at the boundary is set to zero. Neither atmospheric forcing nor river inputs were applied.
 
