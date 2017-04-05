@@ -3,9 +3,11 @@
 
 Time series of tidal water level and depth integrated currents are extracted using harmonic analyses on the both the observed and modelled time series. The eight major tidal constituents of diurnal (K$_1$ and O$_1$), semi diurnal (S$_2$, M$_2$, and N$_2$), and quarter diurnal (MN$_4$, M$_4$, and MS$_4$) frequencies are here evaluated and compared. 
 
-In Run 1 (raw tidal forcing) the modelled amplitudes did not match the observed amplitudes and the maxima appeared too late in time (Fig.~\ref{fig:Viker_timeseries}). In Run 2 both phases and amplitudes improved as expected close to the open boundary (Table~\ref{tab:Viker}). The amplitudes of the principal lunar semidiurnal constituent (M$_2$) and its shallow water overtide (M$_4$) are increased, while the remaining are reduced. Likewise Tab.~\ref{tab:RMS} displays a dramatic decrease in the RMS error of the tides at Viker, from 5.4 cm (Run 1) to 2.3 cm (Run 2). A similar change in the correlation coefficient is also noteworthy from 0.85 to 0.97. The size of the adjustment factors and the change in the RMS error and correlation factor thus emphasise the need for adjustment of the tidal forcing at the boundary. 
+In Run 1 (raw tidal forcing) the modelled amplitudes did not match the observed amplitudes and the maxima appeared too late in time (Fig.~\ref{fig:Viker_timeseries}). In Run 2 both phases and amplitudes improved as expected close to the open boundary (Table~\ref{tab:Viker}). The amplitudes of the principal lunar semidiurnal constituent (M$_2$) and its shallow water overtide (M$_4$) are increased, while the remaining are reduced. Likewise Tab.~\ref{tab:RMS} displays a dramatic decrease in the RMS error of the tides at Viker, from 5.4 cm (Run 1) to 2.3 cm (Run 2). A similar change in the correlation coefficient is also noteworthy from 0.85 to 0.97. The size of the adjustment factors and the change in the RMS error and correlation coefficient thus emphasise the need for adjustment of the tidal forcing at the boundary. 
 
-Far from the southern boundary, we note that the RMS error at Oscarsborg is reduced, and even for the innermost Oslo station the RMS error is reduced (Tab.~\ref{tab:RMS}). A concomitant increase in the correlation coefficient is also evident. Table~\ref{tab:Oscarsborg} shows that the modelled tides have improved also in the inner parts of the fjord. The improvement is also evident in the probability density distributions (PDFs) depicted in Fig.~\ref{fig:Oslo_PDF}. The observed tides at both Viker and Oscarsborg have a double peaked distribution, while the distribution of the tides in Run 1 only show one peak. Although not perfect, this two peak distribution is indeed achieved in Run 2, and hence is much more in line with the observed PDF. Finally, the improvement in applying the adjusted tidal forcing is evident in the scatter plots shown in Fig.~\ref{fig:Oslo_QQ_Scatter}. In particular we note the improvement regarding the tails, that is the maximum tides.  
+Far from the southern boundary, we note that the RMS error at Oscarsborg is reduced, and even for the innermost Oslo station the RMS error is reduced (Tab.~\ref{tab:RMS}). A concomitant increase in the correlation coefficient is also evident. Table~\ref{tab:Oscarsborg} shows that the modelled tides have improved also in the inner parts of the fjord. 
+The improvement is also evident in the scatter plots shown in Fig.~\ref{fig:Oslo_QQ_Scatter}. In particular we note the improvement regarding the tails, that is the maximum tides. 
+Finally, the improvement in applying the adjusted tidal forcing is evident in the probability density distributions (PDFs) depicted in Fig.~\ref{fig:Oslo_PDF}. The observed tides at both Viker and Oscarsborg have a double peaked distribution, while the distribution of the tides in Run 1 only show one peak. Although not perfect, this two peak distribution is indeed achieved in Run 2, and hence is much more in line with the observed PDF. 
 
 Since the modelled tides in the inner part of the fjord depend not only on the tidal forcing at the boundary, but also on how the propagation of the tidal waves are represented in the model, the improvement in the inner domain of the fjord is a crucial test of the method. As is well known, the ROMS model is a terrain-following model. Hence the topography and the irregular coastline of the model domain is smoothed and changed to minimise the ubiquitous pressure gradient error. In addition the smoothing is different in different parts of the domain due to the use of the curvilinear option. Thus the model's topography and irregular coastline do not necessarily reflect the true topology of the Oslofjord. Since the propagation speed $c$ of the tides depends crucially on a correct representation of the depth ($c = \omega/k \approx \sqrt{g h_c}$ where $g$ is the acceleration of gravity and $h_c$ is the characteristic depth), the remaining  discrepancies in the diurnal and quarter diurnal constituents indicate challenges that might be caused by a misrepresentation of the propagation. Finally, also possible errors in bottom friction may have an influence.
 
@@ -75,16 +77,16 @@ In coastal areas the currents vary both in time and over relatively short distan
 
 In order to compare observed and modelled tidal currents, harmonic analyses are performed on the depth averaged currents using T\_Tide.
 Time series of the observed and modelled tidal currents are constructed based on the calculated tidal components for the time period of the observations (Fig.~\ref{fig:Filtvedt_timeseries}). The time series reveal that the amplitudes in Run 1 are too strong compared to the observations. 
-An accurate representation of the currents at one specific position in shallow areas cannot be expected due to spatiotemporal challenges, but the tidal representation have improved after the adjustment (Table~\ref{tab:Filtvedt}). The RMS error decreased significantly and the correlation coefficient improved after the adjustments (Table~\ref{tab:RMS_currents}).
+An accurate representation of the currents at one specific position in shallow areas cannot be expected due to spatiotemporal challenges, but the tidal representation has improved after the adjustment (Table~\ref{tab:Filtvedt}). The RMS error decreased significantly and the correlation coefficient improved after the adjustments (Table~\ref{tab:RMS_currents}).
 
-We conclude that the simple approach to adjust the tidal forcing gives improved and adequate accurate results for the area in question. 
+We conclude that the simple approach to adjust the tidal forcing gives improved and adequate accurate results for the area in question.
 
 
 \begin{figure}[!t]
 \centering
 \includegraphics[width=0.49\textwidth]{fig_Viker_QQ_Scatter}
 \includegraphics[width=0.49\textwidth]{fig_Oscarsborg_QQ_Scatter}
-\caption{Combined QQ (solid) and scatter (dots) for the tidal water level at Viker (left) and Oscarsborg (right)}
+\caption{Combined QQ (solid) and scatter (dots) plot for the tidal water level at Viker (left) and Oscarsborg (right)}
 \label{fig:Oslo_QQ_Scatter}
 \end{figure}
 
@@ -101,7 +103,7 @@ We conclude that the simple approach to adjust the tidal forcing gives improved 
 \centering
 \includegraphics[trim=1cm 1cm 0cm 0cm,clip=true,width=0.49\textwidth]{fig_Oslofjorden_M2amp.eps}
 \includegraphics[trim=1cm 1cm 0cm 0cm,clip=true,width=0.49\textwidth]{fig_Oslofjorden_M2phase.eps}
-\caption{Fields of M$_2$ water level amplitude (left) and phase (right). The corresponding observed values are indicated by coloured circles at the three permanent gauges in the area.}
+\caption{Fields of M$_2$ water level amplitude (left) and phase (right) based on run 2. The corresponding observed values are indicated by coloured circles at the three permanent gauges in the area.}
 \label{fig:Oslofjord_tidal_fields}
 \end{figure}
 
